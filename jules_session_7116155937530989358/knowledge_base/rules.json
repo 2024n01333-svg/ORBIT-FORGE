@@ -1,0 +1,3287 @@
+[
+  {
+    "id": "RULE_ORB_001",
+    "name": "LEO Deorbit Compliance Check (>600km)",
+    "category": "orbit",
+    "salience": 90,
+    "conditions": [
+      {
+        "fact_name": "orbit_altitude_km",
+        "operator": ">",
+        "value": 600
+      },
+      {
+        "fact_name": "has_propulsion_system",
+        "operator": "==",
+        "value": false
+      },
+      {
+        "fact_name": "has_drag_sail",
+        "operator": "==",
+        "value": false
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "deorbit_regulation_compliant",
+        "value": false,
+        "category": "orbit",
+        "description": "Violates FCC 5-year post-mission disposal rule without active deorbit"
+      },
+      {
+        "fact_name": "recommended_deorbit_device",
+        "value": "drag_sail_or_propulsion",
+        "category": "propulsion",
+        "description": "Deployable drag sail or propulsion is required"
+      }
+    ],
+    "rationale": "At altitudes above 600 km, passive aerodynamic drag is insufficient to deorbit within 5 years.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_ORB_002",
+    "name": "Very Low LEO (<350km) Lifetime Warning",
+    "category": "orbit",
+    "salience": 85,
+    "conditions": [
+      {
+        "fact_name": "orbit_altitude_km",
+        "operator": "<",
+        "value": 350
+      },
+      {
+        "fact_name": "has_propulsion_system",
+        "operator": "==",
+        "value": false
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "orbital_decay_risk",
+        "value": "critical_short_lifetime",
+        "category": "orbit",
+        "description": "Atmospheric drag causes orbital decay within 3-6 months"
+      },
+      {
+        "fact_name": "recommended_orbit_maintenance",
+        "value": "electric_or_chemical_propulsion",
+        "category": "propulsion",
+        "description": "Station-keeping propulsion needed for sustained operations"
+      }
+    ],
+    "rationale": "Altitudes below 350 km experience severe atomic oxygen and high atmospheric density.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_ORB_003",
+    "name": "SSO Orbit Configuration for Earth Observation",
+    "category": "orbit",
+    "salience": 80,
+    "conditions": [
+      {
+        "fact_name": "mission_type",
+        "operator": "in",
+        "value": [
+          "earth_observation",
+          "hyperspectral_imaging",
+          "optical_imaging"
+        ]
+      },
+      {
+        "fact_name": "orbit_type",
+        "operator": "==",
+        "value": "sso"
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "recommended_ltan",
+        "value": "10:30_am_descending",
+        "category": "orbit",
+        "description": "Optimal solar illumination and minimal cloud shadowing"
+      },
+      {
+        "fact_name": "ground_station_polar_pass_rate",
+        "value": "high",
+        "category": "comm",
+        "description": "Enables 10-14 passes per day with polar ground stations"
+      }
+    ],
+    "rationale": "A 10:30 AM or 13:30 PM Sun-Synchronous Orbit maximizes illumination quality for optical imaging.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_ORB_004",
+    "name": "Equatorial Orbit Configuration for Tropical Sensing",
+    "category": "orbit",
+    "salience": 75,
+    "conditions": [
+      {
+        "fact_name": "mission_type",
+        "operator": "in",
+        "value": [
+          "iot_telecom",
+          "tropical_weather"
+        ]
+      },
+      {
+        "fact_name": "orbit_inclination_deg",
+        "operator": "<",
+        "value": 20
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "ground_track_coverage",
+        "value": "tropical_band",
+        "category": "orbit",
+        "description": "Concentrates ground tracks between +/-20 degrees latitude"
+      },
+      {
+        "fact_name": "recommended_ground_segment",
+        "value": "equatorial_ground_network",
+        "category": "comm",
+        "description": "Ground stations near equator provide pass every orbit"
+      }
+    ],
+    "rationale": "Low inclination orbits provide repeat passes every 90 minutes over tropical latitudes.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_ORB_005",
+    "name": "Van Allen Radiation Belt Edge Warning (>800km)",
+    "category": "orbit",
+    "salience": 85,
+    "conditions": [
+      {
+        "fact_name": "orbit_altitude_km",
+        "operator": ">=",
+        "value": 800
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "radiation_environment",
+        "value": "high_radiation_hazard",
+        "category": "orbit",
+        "description": "Elevated trapped proton and electron fluxes"
+      },
+      {
+        "fact_name": "rad_hardening_requirement",
+        "value": "rad_hardened_components",
+        "category": "payload",
+        "description": "Components require >20 krad TID rating and latch-up protection"
+      }
+    ],
+    "rationale": "Above 800 km altitude, inner Van Allen belt proton flux sharply increases radiation accumulation.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_ORB_006",
+    "name": "Lunar / Deep Space Trajectory Constraints",
+    "category": "orbit",
+    "salience": 95,
+    "conditions": [
+      {
+        "fact_name": "orbit_type",
+        "operator": "in",
+        "value": [
+          "lunar_orbit",
+          "interplanetary",
+          "deep_space"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "deep_space_regime",
+        "value": true,
+        "category": "orbit",
+        "description": "Beyond Earth magnetosphere protection"
+      },
+      {
+        "fact_name": "thermal_environment_solar_distance",
+        "value": "1_au_varying",
+        "category": "thermal",
+        "description": "Severe thermal extremes without Earth IR albedo buffer"
+      },
+      {
+        "fact_name": "ground_network_type",
+        "value": "deep_space_network",
+        "category": "comm",
+        "description": "Requires DSN 34m/70m dish ground tracking compatibility"
+      }
+    ],
+    "rationale": "Missions outside Earth orbit lose magnetic field shielding and require deep space communication protocols.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_ORB_007",
+    "name": "Dawn-Dusk SSO Power Advantages",
+    "category": "orbit",
+    "salience": 70,
+    "conditions": [
+      {
+        "fact_name": "orbit_type",
+        "operator": "==",
+        "value": "sso"
+      },
+      {
+        "fact_name": "orbit_ltan",
+        "operator": "==",
+        "value": "dawn_dusk_06:00"
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "eclipse_fraction",
+        "value": 0.05,
+        "category": "orbit",
+        "description": "Near constant sunlight reduces battery depth-of-discharge cycles"
+      },
+      {
+        "fact_name": "thermal_stability",
+        "value": "steady_sunlit",
+        "category": "thermal",
+        "description": "Minimal orbital thermal shock from shadow transitions"
+      }
+    ],
+    "rationale": "A 06:00/18:00 Dawn-Dusk orbit experiences minimal or zero eclipses for much of the year.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_ORB_008",
+    "name": "VLEO Aerodynamic Feathering",
+    "category": "orbit",
+    "salience": 65,
+    "conditions": [
+      {
+        "fact_name": "orbit_altitude_km",
+        "operator": "<",
+        "value": 400
+      },
+      {
+        "fact_name": "orbit_altitude_km",
+        "operator": ">=",
+        "value": 250
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "aerodynamic_drag_torque",
+        "value": "dominant_disturbance",
+        "category": "adcs",
+        "description": "Atmospheric torque dominates over solar radiation pressure"
+      },
+      {
+        "fact_name": "adcs_desaturation_assist",
+        "value": "aero_stabilization",
+        "category": "adcs",
+        "description": "Can utilize aerodynamic fins for passive gravity/drag alignment"
+      }
+    ],
+    "rationale": "In VLEO (250-400 km), atmospheric density creates significant aerodynamic restoring torques.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_ORB_009",
+    "name": "Drag Sail Sizing for Mid-LEO Deorbit",
+    "category": "orbit",
+    "salience": 75,
+    "conditions": [
+      {
+        "fact_name": "orbit_altitude_km",
+        "operator": ">=",
+        "value": 500
+      },
+      {
+        "fact_name": "orbit_altitude_km",
+        "operator": "<=",
+        "value": 650
+      },
+      {
+        "fact_name": "recommended_deorbit_device",
+        "operator": "==",
+        "value": "drag_sail_or_propulsion"
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "drag_sail_area_sqm",
+        "value": 1.5,
+        "category": "propulsion",
+        "description": "Minimum 1.5 m^2 deployable sail ensures compliance with FCC 5-year limit"
+      }
+    ],
+    "rationale": "A 1.5 m^2 thin-film sail provides sufficient ballistic cross-section for passive decay from 600 km.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_ORB_010",
+    "name": "Propulsion Delta-V for High LEO Deorbit (>650km)",
+    "category": "orbit",
+    "salience": 80,
+    "conditions": [
+      {
+        "fact_name": "orbit_altitude_km",
+        "operator": ">",
+        "value": 650
+      },
+      {
+        "fact_name": "recommended_deorbit_device",
+        "operator": "==",
+        "value": "drag_sail_or_propulsion"
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "required_deorbit_delta_v_ms",
+        "value": 120.0,
+        "category": "propulsion",
+        "description": "Delta-V required to lower perigee into dense atmosphere (<250km)"
+      },
+      {
+        "fact_name": "propulsion_type_recommendation",
+        "value": "chemical_or_high_thrust_electric",
+        "category": "propulsion",
+        "description": "High total impulse propulsion system necessary"
+      }
+    ],
+    "rationale": "Above 650 km, drag sails lose effectiveness due to exponential drop in atmospheric density; propulsion is mandatory.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_LNC_001",
+    "name": "Standard Deployer Rail Anodization & Smoothness",
+    "category": "launch",
+    "salience": 60,
+    "conditions": [
+      {
+        "fact_name": "form_factor",
+        "operator": "in",
+        "value": [
+          "1U",
+          "2U",
+          "3U",
+          "6U",
+          "12U",
+          "16U"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "deployer_rail_finish",
+        "value": "hard_anodize_ptfe_impregnated",
+        "category": "structure",
+        "description": "Rail surface finish must prevent cold welding inside dispenser"
+      },
+      {
+        "fact_name": "deployment_switch_count",
+        "value": 2,
+        "category": "structure",
+        "description": "Minimum 2 redundant spring-loaded separation kill switches required"
+      }
+    ],
+    "rationale": "CDS specification requires hard anodized rails and separation switches to keep satellite powered off in canister.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_LNC_002",
+    "name": "Post-Deploy RF Transmitter Silence Period",
+    "category": "launch",
+    "salience": 90,
+    "conditions": [
+      {
+        "fact_name": "mission_status",
+        "operator": "!=",
+        "value": "decommissioned"
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "mandatory_post_eject_radio_silence_min",
+        "value": 30,
+        "category": "comm",
+        "description": "Transmitters and antennas must remain undeployed and inactive for 30 min"
+      },
+      {
+        "fact_name": "timer_circuit_independence",
+        "value": "hardware_timed",
+        "category": "comm",
+        "description": "Must use hardware watchdog timer independent of flight software"
+      }
+    ],
+    "rationale": "Launch providers require a 30-minute quiet period after dispenser ejection before any antenna deployment or RF broadcast.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_LNC_003",
+    "name": "Launch Structural Fundamental Frequency Limit",
+    "category": "launch",
+    "salience": 80,
+    "conditions": [
+      {
+        "fact_name": "form_factor",
+        "operator": "in",
+        "value": [
+          "6U",
+          "12U",
+          "16U",
+          "27U"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "min_structural_first_eigenfrequency_hz",
+        "value": 90.0,
+        "category": "structure",
+        "description": "First natural resonant mode must exceed 90 Hz to avoid dispenser coupling"
+      },
+      {
+        "fact_name": "structural_stiffness_ribs",
+        "value": "internal_ribs_required",
+        "category": "structure",
+        "description": "Internal stiffening ribs required across long structural panels"
+      }
+    ],
+    "rationale": "Large CubeSats suffer from low-frequency structural deflection under launch acoustic and vibration loads.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_LNC_004",
+    "name": "Pressurized Propulsion Leakage Safety Inhibits",
+    "category": "launch",
+    "salience": 95,
+    "conditions": [
+      {
+        "fact_name": "has_propulsion_system",
+        "operator": "==",
+        "value": true
+      },
+      {
+        "fact_name": "propulsion_type",
+        "operator": "in",
+        "value": [
+          "cold_gas",
+          "chemical_monoprop"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "required_isolation_valves",
+        "value": 3,
+        "category": "propulsion",
+        "description": "3 independent physical inhibits required to prevent propellant release prior to deployment"
+      },
+      {
+        "fact_name": "burst_pressure_proof_test_margin",
+        "value": 2.0,
+        "category": "propulsion",
+        "description": "Pressure vessel burst qualification factor of 2.0x working pressure"
+      }
+    ],
+    "rationale": "Rideshare safety regulations demand fail-safe triple inhibits on any pressurized fluid/gas system.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_LNC_005",
+    "name": "Non-Toxic Green Monopropellant Mandate",
+    "category": "launch",
+    "salience": 85,
+    "conditions": [
+      {
+        "fact_name": "propulsion_type",
+        "operator": "==",
+        "value": "chemical_monoprop"
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "propellant_chemistry_restriction",
+        "value": "green_monopropellant_only",
+        "category": "propulsion",
+        "description": "Hydrazine strictly prohibited on rideshare; use LMP-103S or AF-M315E/ASCENT"
+      },
+      {
+        "fact_name": "handling_safety_category",
+        "value": "non_toxic_secondary_payload",
+        "category": "propulsion",
+        "description": "Permits fueling at standard integration facilities"
+      }
+    ],
+    "rationale": "Secondary rideshare CubeSats are not permitted to use hypergolic or toxic hydrazine due to personnel hazard.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_STR_001",
+    "name": "SAR Payload Form Factor Requirement",
+    "category": "structure",
+    "salience": 95,
+    "conditions": [
+      {
+        "fact_name": "payload_type",
+        "operator": "==",
+        "value": "synthetic_aperture_radar_sar"
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "min_form_factor",
+        "value": "6U",
+        "category": "structure",
+        "description": "SAR antenna feeds and power converters require at least 6U, preferably 12U"
+      },
+      {
+        "fact_name": "structural_rigidity_grade",
+        "value": "precision_machined_billet",
+        "category": "structure",
+        "description": "Minimizes thermal distortion on radar phase array"
+      }
+    ],
+    "rationale": "Synthetic Aperture Radar payloads cannot fit mechanically or thermally into form factors smaller than 6U.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_STR_002",
+    "name": "Hyperspectral Imager Volume Constraint",
+    "category": "structure",
+    "salience": 90,
+    "conditions": [
+      {
+        "fact_name": "payload_type",
+        "operator": "==",
+        "value": "hyperspectral_imaging"
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "min_form_factor",
+        "value": "3U",
+        "category": "structure",
+        "description": "Offner/Dyson spectrometer optics need >2U of dedicated internal optical path"
+      },
+      {
+        "fact_name": "recommended_form_factor",
+        "value": "6U",
+        "category": "structure",
+        "description": "Leaves 3U for payload and 3U for bus, battery, and ADCS"
+      }
+    ],
+    "rationale": "Hyperspectral spectrometers require dedicated folded focal lengths and slit assemblies requiring at least 2-3U.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_STR_003",
+    "name": "Earth Observation Optical Camera Form Factor",
+    "category": "structure",
+    "salience": 85,
+    "conditions": [
+      {
+        "fact_name": "payload_type",
+        "operator": "==",
+        "value": "earth_obs_optical_rgb"
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "min_form_factor",
+        "value": "2U",
+        "category": "structure",
+        "description": "Telescope aperture (>= 70-90mm) requires at least 1.5U optical volume"
+      },
+      {
+        "fact_name": "recommended_form_factor",
+        "value": "3U",
+        "category": "structure",
+        "description": "Standard 3U configuration provides balance for optics and downlink"
+      }
+    ],
+    "rationale": "Sub-5m GSD optical cameras require telescope focal length that exceeds single 1U boundaries.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_STR_004",
+    "name": "IoT / AIS Receiver Form Factor Compatibility",
+    "category": "structure",
+    "salience": 75,
+    "conditions": [
+      {
+        "fact_name": "payload_type",
+        "operator": "in",
+        "value": [
+          "iot_ais_receiver",
+          "iot_lora_transceiver"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "min_form_factor",
+        "value": "1U",
+        "category": "structure",
+        "description": "RF receiver payload can be accommodated in 0.5U within a 1U-3U bus"
+      },
+      {
+        "fact_name": "recommended_form_factor",
+        "value": "2U",
+        "category": "structure",
+        "description": "2U allows ample deployable tape-spring dipole antennas"
+      }
+    ],
+    "rationale": "SDR-based IoT and maritime AIS payloads have low mass and volume envelopes feasible in compact CubeSats.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_STR_005",
+    "name": "Biological / Microfluidics Payload Lab Volume",
+    "category": "structure",
+    "salience": 85,
+    "conditions": [
+      {
+        "fact_name": "payload_type",
+        "operator": "==",
+        "value": "biology_microfluidics_lab"
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "min_form_factor",
+        "value": "3U",
+        "category": "structure",
+        "description": "Requires fluid reservoir, incubation chamber, and optical density reader"
+      },
+      {
+        "fact_name": "recommended_form_factor",
+        "value": "6U",
+        "category": "structure",
+        "description": "Permits thermal insulation barrier around biological specimens"
+      }
+    ],
+    "rationale": "Life science payloads require pressurized fluid containment and autonomous incubator chambers.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_STR_006",
+    "name": "Deep Space 12U/16U Architecture Mandate",
+    "category": "structure",
+    "salience": 90,
+    "conditions": [
+      {
+        "fact_name": "orbit_type",
+        "operator": "in",
+        "value": [
+          "lunar_orbit",
+          "interplanetary"
+        ]
+      },
+      {
+        "fact_name": "mission_type",
+        "operator": "!=",
+        "value": "suborbital"
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "min_form_factor",
+        "value": "12U",
+        "category": "structure",
+        "description": "Deep space missions require delta-V propulsion, high-gain X/Ka antenna, and deep radiation shielding"
+      },
+      {
+        "fact_name": "recommended_form_factor",
+        "value": "12U",
+        "category": "structure",
+        "description": "Optimal standard for lunar flyby / orbital CubeSat architectures"
+      }
+    ],
+    "rationale": "Interplanetary CubeSats (like MarCO, CAPSTONE) require 6U-12U minimum to carry propulsion and Iris deep space radios.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_STR_007",
+    "name": "Total Mass Budget Validation for 1U",
+    "category": "structure",
+    "salience": 70,
+    "conditions": [
+      {
+        "fact_name": "form_factor",
+        "operator": "==",
+        "value": "1U"
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "max_satellite_mass_kg",
+        "value": 1.33,
+        "category": "structure",
+        "description": "CalPoly CubeSat Design Spec 1U maximum mass constraint"
+      },
+      {
+        "fact_name": "payload_mass_budget_kg",
+        "value": 0.45,
+        "category": "payload",
+        "description": "Allocated mass limit for payload instrument"
+      }
+    ],
+    "rationale": "Standard 1U CubeSats cannot exceed 1.33 kg to be compliant with P-POD deployers.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_STR_008",
+    "name": "Total Mass Budget Validation for 2U",
+    "category": "structure",
+    "salience": 70,
+    "conditions": [
+      {
+        "fact_name": "form_factor",
+        "operator": "==",
+        "value": "2U"
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "max_satellite_mass_kg",
+        "value": 2.66,
+        "category": "structure",
+        "description": "CalPoly CubeSat Design Spec 2U maximum mass constraint"
+      },
+      {
+        "fact_name": "payload_mass_budget_kg",
+        "value": 1.0,
+        "category": "payload",
+        "description": "Allocated mass limit for payload instrument"
+      }
+    ],
+    "rationale": "Standard 2U CubeSats cannot exceed 2.66 kg total mass.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_STR_009",
+    "name": "Total Mass Budget Validation for 3U",
+    "category": "structure",
+    "salience": 70,
+    "conditions": [
+      {
+        "fact_name": "form_factor",
+        "operator": "==",
+        "value": "3U"
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "max_satellite_mass_kg",
+        "value": 4.0,
+        "category": "structure",
+        "description": "CalPoly CubeSat Design Spec 3U maximum mass constraint"
+      },
+      {
+        "fact_name": "payload_mass_budget_kg",
+        "value": 1.8,
+        "category": "payload",
+        "description": "Allocated mass limit for payload instrument"
+      }
+    ],
+    "rationale": "Standard 3U CubeSats cannot exceed 4.0 kg total mass.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_STR_010",
+    "name": "Total Mass Budget Validation for 6U",
+    "category": "structure",
+    "salience": 70,
+    "conditions": [
+      {
+        "fact_name": "form_factor",
+        "operator": "==",
+        "value": "6U"
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "max_satellite_mass_kg",
+        "value": 12.0,
+        "category": "structure",
+        "description": "Standard canister dispenser 6U mass limit (up to 12kg)"
+      },
+      {
+        "fact_name": "payload_mass_budget_kg",
+        "value": 4.5,
+        "category": "payload",
+        "description": "Allocated mass limit for payload instrument"
+      }
+    ],
+    "rationale": "Standard 6U CubeSats allow up to 12.0 kg total mass.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_STR_011",
+    "name": "Total Mass Budget Validation for 12U",
+    "category": "structure",
+    "salience": 70,
+    "conditions": [
+      {
+        "fact_name": "form_factor",
+        "operator": "==",
+        "value": "12U"
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "max_satellite_mass_kg",
+        "value": 24.0,
+        "category": "structure",
+        "description": "Standard 12U dispenser mass limit (up to 24kg)"
+      },
+      {
+        "fact_name": "payload_mass_budget_kg",
+        "value": 9.0,
+        "category": "payload",
+        "description": "Allocated mass limit for payload instrument"
+      }
+    ],
+    "rationale": "Standard 12U CubeSats allow up to 24.0 kg total mass.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_STR_012",
+    "name": "Center of Mass Envelope Offset Check",
+    "category": "structure",
+    "salience": 65,
+    "conditions": [
+      {
+        "fact_name": "form_factor",
+        "operator": "in",
+        "value": [
+          "1U",
+          "2U",
+          "3U",
+          "6U",
+          "12U"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "max_cg_offset_mm",
+        "value": 20.0,
+        "category": "structure",
+        "description": "Center of gravity must lie within 20mm of geometric center"
+      }
+    ],
+    "rationale": "CDS specification requires CG within tight tolerance to prevent jamming in deployer guide rails.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_STR_013",
+    "name": "Modular PC/104 Stack vs Backplane Architecture",
+    "category": "structure",
+    "salience": 60,
+    "conditions": [
+      {
+        "fact_name": "form_factor",
+        "operator": "in",
+        "value": [
+          "6U",
+          "12U",
+          "16U"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "avionics_interconnect_bus",
+        "value": "custom_backplane_harness",
+        "category": "structure",
+        "description": "Replace PC/104 stack with rigid backplane harness to save volume and increase reliability"
+      }
+    ],
+    "rationale": "Larger CubeSats (6U+) benefit from backplane topologies rather than stacking connectors.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_STR_014",
+    "name": "External Component Protrusion Constraint",
+    "category": "structure",
+    "salience": 80,
+    "conditions": [
+      {
+        "fact_name": "form_factor",
+        "operator": "in",
+        "value": [
+          "1U",
+          "2U",
+          "3U",
+          "6U",
+          "12U"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "max_standoff_protrusion_mm",
+        "value": 6.5,
+        "category": "structure",
+        "description": "No component may extend beyond 6.5mm from exterior face before release"
+      }
+    ],
+    "rationale": "Dispenser rails have strict keep-out envelopes to avoid catching on canister walls during spring release.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_STR_015",
+    "name": "Solar Array Hinged Latch Redundancy",
+    "category": "structure",
+    "salience": 75,
+    "conditions": [
+      {
+        "fact_name": "solar_panel_type",
+        "operator": "==",
+        "value": "deployable_panels"
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "burn_wire_redundancy",
+        "value": "dual_resistor_circuits",
+        "category": "structure",
+        "description": "Use redundant burn wires (Nichrome or Vectran tie) for release activation"
+      }
+    ],
+    "rationale": "Single-point deployable solar panel failures are a leading cause of CubeSat mission loss.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_PWR_001",
+    "name": "High Power Payload Demands Deployable Solar Panels",
+    "category": "power",
+    "salience": 90,
+    "conditions": [
+      {
+        "fact_name": "peak_power_requirement_w",
+        "operator": ">=",
+        "value": 25.0
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "solar_panel_type",
+        "value": "deployable_panels",
+        "category": "power",
+        "description": "Body-mounted panels cannot satisfy >25W continuous orbit-average power"
+      },
+      {
+        "fact_name": "solar_tracking_need",
+        "value": "azimuth_sada_recommended",
+        "category": "power",
+        "description": "Single-axis solar array drive assembly recommended"
+      }
+    ],
+    "rationale": "Peak loads exceeding 25W exceed body-mounted solar generation capabilities in standard CubeSat sizes.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_PWR_002",
+    "name": "Low Power IoT Body Mounted Panels Sufficient",
+    "category": "power",
+    "salience": 75,
+    "conditions": [
+      {
+        "fact_name": "average_power_consumption_w",
+        "operator": "<=",
+        "value": 3.0
+      },
+      {
+        "fact_name": "form_factor",
+        "operator": "in",
+        "value": [
+          "1U",
+          "2U",
+          "3U"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "solar_panel_type",
+        "value": "body_mounted",
+        "category": "power",
+        "description": "Body-mounted panels eliminate deployment risk for low-power mission"
+      }
+    ],
+    "rationale": "Power draws under 3W are easily sustained by body-mounted triple-junction solar cells.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_PWR_003",
+    "name": "Battery Capacity Sizing for Eclipse Duration",
+    "category": "power",
+    "salience": 85,
+    "conditions": [
+      {
+        "fact_name": "average_power_consumption_w",
+        "operator": ">",
+        "value": 0
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "min_battery_capacity_wh",
+        "value": "calculated_by_eclipse_and_dod",
+        "category": "power",
+        "description": "Wh = (P_avg * 0.65 hr) / (DoD_max * 0.90)"
+      }
+    ],
+    "rationale": "Battery must sustain full satellite power draw during 35-40 minutes of eclipse with safe depth-of-discharge.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_PWR_004",
+    "name": "Battery Chemistry Selection: LEO Cycling Life",
+    "category": "power",
+    "salience": 80,
+    "conditions": [
+      {
+        "fact_name": "mission_duration_years",
+        "operator": ">=",
+        "value": 3.0
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "battery_chemistry",
+        "value": "lithium_ion_18650_high_cycle",
+        "category": "power",
+        "description": "18650 cylindrical cells with strict 20-30% DoD provide >16,000 cycles"
+      },
+      {
+        "fact_name": "battery_heater_requirement",
+        "value": "closed_loop_heater_patch",
+        "category": "thermal",
+        "description": "Active thermal control needed to keep battery > 5C"
+      }
+    ],
+    "rationale": "Pouch cells degrade quickly in long LEO missions due to thermal gradient stress and high cycle count.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_PWR_005",
+    "name": "High Bus Voltage (28V) for High Power Systems",
+    "category": "power",
+    "salience": 85,
+    "conditions": [
+      {
+        "fact_name": "peak_power_requirement_w",
+        "operator": ">=",
+        "value": 60.0
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "eps_regulated_bus_voltage",
+        "value": "28V_bus",
+        "category": "power",
+        "description": "Higher bus voltage minimizes I^2*R copper ohmic losses across wiring harness"
+      },
+      {
+        "fact_name": "eps_converter_topology",
+        "value": "mppt_buck_boost_hybrid",
+        "category": "power",
+        "description": "Maximum Power Point Tracking buck-boost regulator"
+      }
+    ],
+    "rationale": "At loads >60W, standard 3.3V/5V/12V distribution causes unacceptable current levels and thermal dissipation.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_PWR_006",
+    "name": "Standard Bus Voltage (5V / 12V) for 3U Subsystems",
+    "category": "power",
+    "salience": 70,
+    "conditions": [
+      {
+        "fact_name": "peak_power_requirement_w",
+        "operator": "<",
+        "value": 60.0
+      },
+      {
+        "fact_name": "peak_power_requirement_w",
+        "operator": ">=",
+        "value": 15.0
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "eps_regulated_bus_voltage",
+        "value": "5V_and_12V_dual_bus",
+        "category": "power",
+        "description": "Dual rail accommodates ADCS reaction wheels (12V) and avionics (5V/3.3V)"
+      }
+    ],
+    "rationale": "Standard CubeSat subsystems primarily interface via regulated 5V and 12V power rails.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_PWR_007",
+    "name": "Low Power Single Bus Architecture (3.3V/5V)",
+    "category": "power",
+    "salience": 65,
+    "conditions": [
+      {
+        "fact_name": "peak_power_requirement_w",
+        "operator": "<",
+        "value": 15.0
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "eps_regulated_bus_voltage",
+        "value": "3.3V_and_5V_standard",
+        "category": "power",
+        "description": "High-efficiency synchronous buck converters for microcontroller avionics"
+      }
+    ],
+    "rationale": "Simpler dual low-voltage rails maximize converter efficiency for sub-15W satellites.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_PWR_008",
+    "name": "Deep Space Solar Cell Area Margin (1 AU to 1.5 AU)",
+    "category": "power",
+    "salience": 90,
+    "conditions": [
+      {
+        "fact_name": "orbit_type",
+        "operator": "in",
+        "value": [
+          "mars_transfer",
+          "interplanetary"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "solar_irradiance_scaling_factor",
+        "value": 0.44,
+        "category": "power",
+        "description": "Solar flux drops with inverse-square law; at Mars (1.52 AU) flux is 44% of Earth"
+      },
+      {
+        "fact_name": "solar_panel_oversize_ratio",
+        "value": 2.3,
+        "category": "power",
+        "description": "Array area must be oversized by 2.3x compared to 1 AU LEO equivalent"
+      }
+    ],
+    "rationale": "Interplanetary missions moving away from the Sun must oversize solar arrays to compensate for flux falloff.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_PWR_009",
+    "name": "Triple Junction Solar Cell Selection",
+    "category": "power",
+    "salience": 75,
+    "conditions": [
+      {
+        "fact_name": "mission_status",
+        "operator": "!=",
+        "value": "decommissioned"
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "solar_cell_technology",
+        "value": "GalnP_GaAs_Ge_triple_junction",
+        "category": "power",
+        "description": "State-of-the-art space flight qualified 29.5-30% efficiency cells"
+      }
+    ],
+    "rationale": "Silicon solar cells are obsolete for CubeSats due to strict volume and surface area constraints.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_PWR_010",
+    "name": "Overcurrent Protection and Latch-up Current Limiting",
+    "category": "power",
+    "salience": 85,
+    "conditions": [
+      {
+        "fact_name": "radiation_environment",
+        "operator": "in",
+        "value": [
+          "high_radiation_hazard",
+          "deep_space_radiation"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "eps_protection_mechanism",
+        "value": "solid_state_latching_current_limiters",
+        "category": "power",
+        "description": "Sub-millisecond hardware cutoffs for Single Event Latch-ups (SEL)"
+      },
+      {
+        "fact_name": "subsystem_power_domain_isolation",
+        "value": true,
+        "category": "power",
+        "description": "Payload power isolated from primary bus flight computer"
+      }
+    ],
+    "rationale": "Radiation-induced single-event latchups will destroy CMOS components without fast current limiting.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_PWR_011",
+    "name": "Battery Cold Environment Heater Control",
+    "category": "power",
+    "salience": 85,
+    "conditions": [
+      {
+        "fact_name": "orbit_eclipse_fraction",
+        "operator": ">=",
+        "value": 0.35
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "battery_heater_power_w",
+        "value": 2.5,
+        "category": "thermal",
+        "description": "Dedicated heater budget to keep battery temperature above 0C during eclipse"
+      },
+      {
+        "fact_name": "battery_heater_interlock",
+        "value": "autonomous_thermostat",
+        "category": "power",
+        "description": "Bimetallic strip or thermistor control independent of software"
+      }
+    ],
+    "rationale": "Charging Li-ion batteries below 0 deg C causes permanent lithium dendrite plating and catastrophic short circuits.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_PWR_012",
+    "name": "Deployable Solar Array Sun-Tracking SADA",
+    "category": "power",
+    "salience": 80,
+    "conditions": [
+      {
+        "fact_name": "form_factor",
+        "operator": "in",
+        "value": [
+          "6U",
+          "12U",
+          "16U"
+        ]
+      },
+      {
+        "fact_name": "solar_panel_type",
+        "operator": "==",
+        "value": "deployable_panels"
+      },
+      {
+        "fact_name": "peak_power_requirement_w",
+        "operator": ">=",
+        "value": 80.0
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "solar_array_drive_assembly",
+        "value": "single_axis_gimbal_sada",
+        "category": "power",
+        "description": "Increases daily power harvest by 35-45% without off-pointing payload"
+      }
+    ],
+    "rationale": "High power payloads (SAR, radar) require sun-tracking solar arrays so the spacecraft can maintain nadir pointing.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_PWR_013",
+    "name": "Peak Shaving Battery Sizing for High RF Transmit",
+    "category": "power",
+    "salience": 75,
+    "conditions": [
+      {
+        "fact_name": "comm_tx_power_w",
+        "operator": ">=",
+        "value": 20.0
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "battery_c_rate_limit",
+        "value": 1.0,
+        "category": "power",
+        "description": "Ensures battery discharge rate does not exceed 1C continuous rating"
+      },
+      {
+        "fact_name": "supercapacitor_buffer_option",
+        "value": "considered_for_pulsed_rf",
+        "category": "power",
+        "description": "Parallel supercapacitor bank absorbs transmit surge current"
+      }
+    ],
+    "rationale": "High power transmitters (X-band, Ka-band) pulse 20-40W of RF power during ground station passes.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_PWR_014",
+    "name": "EPS Energy Balance Margin Rule",
+    "category": "power",
+    "salience": 90,
+    "conditions": [
+      {
+        "fact_name": "average_power_consumption_w",
+        "operator": ">",
+        "value": 0
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "min_power_generation_margin",
+        "value": 0.3,
+        "category": "power",
+        "description": "Orbit-average power generated must exceed average consumption by at least 30%"
+      }
+    ],
+    "rationale": "NASA standard requires at least 30% margin between orbit-average power generation and satellite consumption.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_PWR_015",
+    "name": "Solar Cell Radiation Degradation Sizing Factor",
+    "category": "power",
+    "salience": 75,
+    "conditions": [
+      {
+        "fact_name": "mission_duration_years",
+        "operator": ">=",
+        "value": 2.0
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "solar_bol_to_eol_derating",
+        "value": 0.85,
+        "category": "power",
+        "description": "Derate solar cell capacity by 15-20% for End-of-Life (EOL) calculation"
+      }
+    ],
+    "rationale": "Radiation, micrometeroid pitting, and thermal cycling degrade solar cell output by ~2.5% per year in LEO.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_COM_001",
+    "name": "High Volume Payload Downlink: X-Band Requirement",
+    "category": "comm",
+    "salience": 90,
+    "conditions": [
+      {
+        "fact_name": "daily_data_volume_mb",
+        "operator": ">=",
+        "value": 10000
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "recommended_comm_downlink_band",
+        "value": "X_Band",
+        "category": "comm",
+        "description": "Data volume >= 10 GB/day requires high-rate X-band downlink (20-100 Mbps)"
+      },
+      {
+        "fact_name": "patch_antenna_gain_dbi",
+        "value": 8.0,
+        "category": "comm",
+        "description": "Requires directional patch antenna or phased array"
+      },
+      {
+        "fact_name": "adcs_pointing_req_for_comm",
+        "value": 2.0,
+        "category": "adcs",
+        "description": "Requires 3-axis pointing toward ground station during pass"
+      }
+    ],
+    "rationale": "Downlinking gigabytes of optical or SAR data during brief 8-minute passes requires X-band or Ka-band rates.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_COM_002",
+    "name": "Ultra High Volume Payload Downlink: Optical Laser Comm",
+    "category": "comm",
+    "salience": 95,
+    "conditions": [
+      {
+        "fact_name": "daily_data_volume_mb",
+        "operator": ">=",
+        "value": 100000
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "recommended_comm_downlink_band",
+        "value": "Optical_Laser",
+        "category": "comm",
+        "description": "Data volumes > 100 GB/day require optical laser communication terminal"
+      },
+      {
+        "fact_name": "adcs_pointing_req_for_comm",
+        "value": 0.01,
+        "category": "adcs",
+        "description": "Requires ultra-fine star-tracker pointing and fast-steering mirror"
+      }
+    ],
+    "rationale": "Extremely high data rates (1+ Gbps) demand optical communication to avoid spectrum licensing choke points.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_COM_003",
+    "name": "Medium Data Volume: S-Band Downlink",
+    "category": "comm",
+    "salience": 80,
+    "conditions": [
+      {
+        "fact_name": "daily_data_volume_mb",
+        "operator": "<",
+        "value": 10000
+      },
+      {
+        "fact_name": "daily_data_volume_mb",
+        "operator": ">=",
+        "value": 500
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "recommended_comm_downlink_band",
+        "value": "S_Band",
+        "category": "comm",
+        "description": "S-Band provides 1-5 Mbps downlink, sufficient for 0.5-10 GB daily data"
+      },
+      {
+        "fact_name": "recommended_antenna_comm",
+        "value": "patch_antenna_s_band",
+        "category": "comm",
+        "description": "Compact body-mounted patch antenna"
+      }
+    ],
+    "rationale": "S-Band is the ideal industry workhorse for medium-throughput CubeSat data downlinks.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_COM_004",
+    "name": "Low Data Rate IoT: UHF Downlink Sufficient",
+    "category": "comm",
+    "salience": 75,
+    "conditions": [
+      {
+        "fact_name": "daily_data_volume_mb",
+        "operator": "<",
+        "value": 500
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "recommended_comm_downlink_band",
+        "value": "UHF",
+        "category": "comm",
+        "description": "UHF (435-438 MHz) provides 9.6-19.2 kbps, ideal for IoT, telemetry & science housekeeping"
+      },
+      {
+        "fact_name": "recommended_antenna_comm",
+        "value": "deployable_tape_spring_dipole",
+        "category": "comm",
+        "description": "Omnidirectional pattern eliminates strict pointing requirements during downlink"
+      }
+    ],
+    "rationale": "Low data volume missions benefit from omnidirectional UHF coverage and simple ground station hardware.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_COM_005",
+    "name": "Amateur vs Commercial Frequency Licensing",
+    "category": "comm",
+    "salience": 85,
+    "conditions": [
+      {
+        "fact_name": "mission_organization_type",
+        "operator": "==",
+        "value": "commercial"
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "amateur_band_prohibition",
+        "value": true,
+        "category": "regulations",
+        "description": "Commercial entities cannot use amateur UHF/VHF bands; must file commercial space spectrum with FCC/ITU"
+      },
+      {
+        "fact_name": "spectrum_filing_cycle_months",
+        "value": 18,
+        "category": "regulations",
+        "description": "Requires 12-18 months advance coordination"
+      }
+    ],
+    "rationale": "IARU amateur satellite frequencies are strictly reserved for non-profit education and experimental radio hobbyists.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_COM_006",
+    "name": "Deep Space Iris Radio for Lunar / Interplanetary",
+    "category": "comm",
+    "salience": 95,
+    "conditions": [
+      {
+        "fact_name": "orbit_type",
+        "operator": "in",
+        "value": [
+          "lunar_orbit",
+          "interplanetary"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "transceiver_hardware_architecture",
+        "value": "jpl_iris_deep_space_transponder",
+        "category": "comm",
+        "description": "Deep Space Network (DSN) compatible X-band transponder"
+      },
+      {
+        "fact_name": "high_gain_antenna_required",
+        "value": "reflectarray_or_deployable_mesh",
+        "category": "comm",
+        "description": "High gain antenna (>26 dBi) required to close link over lunar/planetary distance"
+      }
+    ],
+    "rationale": "Communications beyond Earth orbit require specialized transponders supporting coherent ranging and DSN protocols.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_COM_007",
+    "name": "Dual Redundant Telemetry & Telecommand (TT&C)",
+    "category": "comm",
+    "salience": 80,
+    "conditions": [
+      {
+        "fact_name": "recommended_comm_downlink_band",
+        "operator": "in",
+        "value": [
+          "X_Band",
+          "Ka_Band",
+          "Optical_Laser"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "secondary_ttc_radio",
+        "value": "uhf_omnidirectional_backup",
+        "category": "comm",
+        "description": "Independent UHF/VHF receiver ensures command access even if satellite loses attitude orientation"
+      }
+    ],
+    "rationale": "Never rely exclusively on high-gain directional antennas for telemetry and emergency command recovery.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_COM_008",
+    "name": "Link Margin Safety Buffer Standard",
+    "category": "comm",
+    "salience": 85,
+    "conditions": [
+      {
+        "fact_name": "mission_status",
+        "operator": "!=",
+        "value": "decommissioned"
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "min_rf_link_margin_db",
+        "value": 3.0,
+        "category": "comm",
+        "description": "Minimum 3 dB positive link margin required under worst-case 5-degree ground station elevation"
+      }
+    ],
+    "rationale": "NASA / DoD communications design guidelines require at least 3 dB link margin to absorb atmospheric attenuation.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_COM_009",
+    "name": "Rain Attenuation Margin for Ka-Band",
+    "category": "comm",
+    "salience": 75,
+    "conditions": [
+      {
+        "fact_name": "recommended_comm_downlink_band",
+        "operator": "==",
+        "value": "Ka_Band"
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "atmospheric_rain_fade_margin_db",
+        "value": 6.0,
+        "category": "comm",
+        "description": "Ka-band signals suffer severe rain fade; ground stations require site diversity"
+      }
+    ],
+    "rationale": "Ka-band frequencies (26-40 GHz) experience up to 10 dB attenuation through rain and heavy cloud moisture.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_COM_010",
+    "name": "Inter-Satellite Link (ISL) for Real-Time Constellation Access",
+    "category": "comm",
+    "salience": 80,
+    "conditions": [
+      {
+        "fact_name": "mission_latency_requirement",
+        "operator": "==",
+        "value": "real_time_low_latency"
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "inter_satellite_link_recommendation",
+        "value": "iridium_or_globalstar_relay",
+        "category": "comm",
+        "description": "Relay patch antenna sends critical alerts to LEO constellation with < 10 second latency"
+      }
+    ],
+    "rationale": "Using Iridium Short Burst Data or Globalstar allows immediate anomaly reporting without waiting for ground pass.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_ADC_001",
+    "name": "Sub-0.1 Degree Pointing Demands Star Tracker & Reaction Wheels",
+    "category": "adcs",
+    "salience": 90,
+    "conditions": [
+      {
+        "fact_name": "pointing_accuracy_requirement_deg",
+        "operator": "<=",
+        "value": 0.1
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "adcs_actuator_type",
+        "value": "3_axis_reaction_wheel_cluster",
+        "category": "adcs",
+        "description": "Reaction wheels provide precision torque and fine attitude agility"
+      },
+      {
+        "fact_name": "adcs_sensor_suite",
+        "value": "miniature_star_tracker_and_gyros",
+        "category": "adcs",
+        "description": "Star tracker delivers arcsecond attitude determination"
+      },
+      {
+        "fact_name": "adcs_desaturation_hardware",
+        "value": "magnetorquer_rods",
+        "category": "adcs",
+        "description": "Magnetic torque coils desaturate wheel angular momentum"
+      }
+    ],
+    "rationale": "High resolution optical imaging and inter-satellite pointing cannot be achieved with sun sensors alone.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_ADC_002",
+    "name": "Moderate Pointing (1 to 5 Degrees): Magnetorquers & Coarse Sun Sensors",
+    "category": "adcs",
+    "salience": 75,
+    "conditions": [
+      {
+        "fact_name": "pointing_accuracy_requirement_deg",
+        "operator": ">",
+        "value": 1.0
+      },
+      {
+        "fact_name": "pointing_accuracy_requirement_deg",
+        "operator": "<=",
+        "value": 5.0
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "adcs_actuator_type",
+        "value": "3_axis_magnetorquers",
+        "category": "adcs",
+        "description": "Magnetic rods provide reliable 3-axis damping and coarse orientation"
+      },
+      {
+        "fact_name": "adcs_sensor_suite",
+        "value": "sun_sensors_and_triaxial_magnetometer",
+        "category": "adcs",
+        "description": "Economical sensor suite sufficient for coarse Earth/Sun orientation"
+      }
+    ],
+    "rationale": "Coarse pointing payloads (e.g. wide-angle cameras, radio beacons) do not require costly reaction wheels.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_ADC_003",
+    "name": "Passive Magnetic Damping for Simple IoT / Telemetry",
+    "category": "adcs",
+    "salience": 70,
+    "conditions": [
+      {
+        "fact_name": "pointing_accuracy_requirement_deg",
+        "operator": ">",
+        "value": 10.0
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "adcs_actuator_type",
+        "value": "passive_permanent_magnet_and_hysteresis_rods",
+        "category": "adcs",
+        "description": "Aligns spacecraft along Earth magnetic field vector with zero power consumption"
+      },
+      {
+        "fact_name": "adcs_power_draw_w",
+        "value": 0.0,
+        "category": "adcs",
+        "description": "Zero electrical power drawn by ADCS"
+      }
+    ],
+    "rationale": "Passive magnetic stabilization is essentially failure-proof and draws zero watts of power.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_ADC_004",
+    "name": "Magnetorquer Ineffectiveness in Deep Space",
+    "category": "adcs",
+    "salience": 95,
+    "conditions": [
+      {
+        "fact_name": "orbit_type",
+        "operator": "in",
+        "value": [
+          "lunar_orbit",
+          "interplanetary"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "magnetic_actuation_possible",
+        "value": false,
+        "category": "adcs",
+        "description": "Planetary/interplanetary magnetic field is negligible (~0 nT)"
+      },
+      {
+        "fact_name": "reaction_wheel_desaturation_method",
+        "value": "cold_gas_or_electric_thrusters",
+        "category": "adcs",
+        "description": "Requires reaction control thrusters (RCS) for wheel momentum dump"
+      }
+    ],
+    "rationale": "Outside Earth's magnetosphere, magnetorquers cannot produce control torque.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_ADC_005",
+    "name": "Jitter Isolation for High-Res Imagery",
+    "category": "adcs",
+    "salience": 85,
+    "conditions": [
+      {
+        "fact_name": "payload_type",
+        "operator": "in",
+        "value": [
+          "earth_obs_optical_rgb",
+          "hyperspectral_imaging"
+        ]
+      },
+      {
+        "fact_name": "adcs_actuator_type",
+        "operator": "==",
+        "value": "3_axis_reaction_wheel_cluster"
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "mechanical_jitter_isolation",
+        "value": "elastomeric_viscoelastic_dampers",
+        "category": "adcs",
+        "description": "Isolates wheel high-frequency harmonic vibrations from optical payload"
+      }
+    ],
+    "rationale": "Reaction wheel imbalance causes micro-vibrations (jitter) that blur optical ground images.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_ADC_006",
+    "name": "B-Dot Rate Damping Algorithm for Post-Deploy Detumble",
+    "category": "adcs",
+    "salience": 90,
+    "conditions": [
+      {
+        "fact_name": "mission_status",
+        "operator": "!=",
+        "value": "decommissioned"
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "detumble_mode_algorithm",
+        "value": "b_dot_magnetic_damping",
+        "category": "adcs",
+        "description": "Damps high tip-off angular rates (< 30 deg/sec) down to < 2 deg/sec within 2 orbits"
+      }
+    ],
+    "rationale": "The B-dot control law using magnetorquers is the universal standard for CubeSat post-separation detumbling.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_ADC_007",
+    "name": "GPS / GNSS Receiver Requirement for Autonomous Orbit Determination",
+    "category": "adcs",
+    "salience": 80,
+    "conditions": [
+      {
+        "fact_name": "mission_type",
+        "operator": "in",
+        "value": [
+          "earth_observation",
+          "constellation_formation",
+          "sar_imaging"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "gnss_receiver_installed",
+        "value": true,
+        "category": "adcs",
+        "description": "Provides real-time position, velocity, and nanosecond PPS timing to payload and ADCS"
+      },
+      {
+        "fact_name": "orbit_ephemeris_source",
+        "value": "onboard_sgp4_with_gnss_kalman_filter",
+        "category": "adcs",
+        "description": "Real-time propagation for nadir and target-tracking pointing"
+      }
+    ],
+    "rationale": "Precision payloads require knowing accurate spacecraft position for ground target pointing.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_THM_001",
+    "name": "High Power Dissipation Demands Dedicated Thermal Radiator",
+    "category": "thermal",
+    "salience": 90,
+    "conditions": [
+      {
+        "fact_name": "peak_power_requirement_w",
+        "operator": ">=",
+        "value": 30.0
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "thermal_control_architecture",
+        "value": "passive_radiator_with_silver_teflon",
+        "category": "thermal",
+        "description": "High emissivity radiator panel positioned on anti-sun face"
+      },
+      {
+        "fact_name": "heat_pipe_copper_installed",
+        "value": true,
+        "category": "thermal",
+        "description": "Transfers concentrated payload amplifier heat to outer radiator panel"
+      }
+    ],
+    "rationale": "CubeSats dissipating >30W will overheat internal avionics without dedicated radiators and heat transport.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_THM_002",
+    "name": "Optical Telescope Athermalization",
+    "category": "thermal",
+    "salience": 85,
+    "conditions": [
+      {
+        "fact_name": "payload_type",
+        "operator": "in",
+        "value": [
+          "earth_obs_optical_rgb",
+          "hyperspectral_imaging"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "telescope_thermal_structure",
+        "value": "invar_or_carbon_fiber_metering_structure",
+        "category": "thermal",
+        "description": "Near-zero coefficient of thermal expansion prevents thermal defocusing"
+      },
+      {
+        "fact_name": "optical_bay_thermal_insulation",
+        "value": "multi_layer_insulation_mli",
+        "category": "thermal",
+        "description": "10-layer aluminized Mylar MLI isolates optical bay from bus fluctuations"
+      }
+    ],
+    "rationale": "Thermal expansion of aluminum barrel causes defocusing and image degradation across orbital thermal cycles.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_THM_003",
+    "name": "Battery Thermal Enclosure Isolation",
+    "category": "thermal",
+    "salience": 85,
+    "conditions": [
+      {
+        "fact_name": "mission_status",
+        "operator": "!=",
+        "value": "decommissioned"
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "battery_thermal_mounting",
+        "value": "thermally_isolated_delrin_standoffs",
+        "category": "thermal",
+        "description": "Conductively isolates battery pack from cold outer aluminum chassis"
+      },
+      {
+        "fact_name": "battery_heater_control_logic",
+        "value": "automatic_thermostatic_heating",
+        "category": "thermal",
+        "description": "Engages heaters when battery core temp drops below +2C"
+      }
+    ],
+    "rationale": "Batteries have the narrowest allowable operating temperature range (0 to 35C) of any CubeSat component.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_THM_004",
+    "name": "Cryocooler Integration for Thermal Infrared (TIR) Payload",
+    "category": "thermal",
+    "salience": 95,
+    "conditions": [
+      {
+        "fact_name": "payload_type",
+        "operator": "==",
+        "value": "earth_obs_thermal_tir"
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "active_thermal_cooling",
+        "value": "tactical_stirling_micro_cryocooler",
+        "category": "thermal",
+        "description": "Cools LWIR sensor focal plane down to 80K (-193C) to reduce dark current noise"
+      },
+      {
+        "fact_name": "cryocooler_power_budget_w",
+        "value": 20.0,
+        "category": "power",
+        "description": "Requires 15-25W continuous power allocation for cryocooler compressor"
+      }
+    ],
+    "rationale": "Long-wave infrared focal plane arrays must be cryogenically cooled to achieve useful radiometric signal.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_THM_005",
+    "name": "Passive Thermal Control for Low Power Small CubeSat",
+    "category": "thermal",
+    "salience": 70,
+    "conditions": [
+      {
+        "fact_name": "form_factor",
+        "operator": "in",
+        "value": [
+          "1U",
+          "2U",
+          "3U"
+        ]
+      },
+      {
+        "fact_name": "peak_power_requirement_w",
+        "operator": "<",
+        "value": 15.0
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "thermal_control_architecture",
+        "value": "passive_coatings_and_black_anodization",
+        "category": "thermal",
+        "description": "Balanced surface emissivity/absorptivity ratios maintain equilibrium at 10-30C"
+      }
+    ],
+    "rationale": "Sub-15W CubeSats generally maintain equilibrium without active radiators through careful passive finish selection.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_PRP_001",
+    "name": "Constellation Orbit Phasing: Electrospray / Ion Propulsion",
+    "category": "propulsion",
+    "salience": 85,
+    "conditions": [
+      {
+        "fact_name": "mission_type",
+        "operator": "in",
+        "value": [
+          "constellation_formation",
+          "formation_flying"
+        ]
+      },
+      {
+        "fact_name": "form_factor",
+        "operator": "in",
+        "value": [
+          "3U",
+          "6U",
+          "12U"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "propulsion_type",
+        "value": "electrospray_or_gridded_ion",
+        "category": "propulsion",
+        "description": "High specific impulse (Isp > 800s) provides >150 m/s delta-V for constellation slot insertion"
+      },
+      {
+        "fact_name": "propulsion_volume_allocation_u",
+        "value": 1.0,
+        "category": "propulsion",
+        "description": "Fits within standard 1U modular propulsion bay"
+      }
+    ],
+    "rationale": "High Isp electric propulsion is ideal for constellation altitude raising, slot phasing, and lifetime drag makeup.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_PRP_002",
+    "name": "Rapid Slew / High Impulse Maneuver: Chemical Green Monoprop",
+    "category": "propulsion",
+    "salience": 85,
+    "conditions": [
+      {
+        "fact_name": "mission_type",
+        "operator": "==",
+        "value": "rapid_inspection_or_rendezvous"
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "propulsion_type",
+        "value": "green_chemical_monopropellant",
+        "category": "propulsion",
+        "description": "Provides high thrust (0.5 - 1.0 N) required for rapid impulsive rendezvous maneuvers"
+      }
+    ],
+    "rationale": "Electric propulsion thrust (0.1-5 mN) is far too slow for time-critical orbital proximity operations.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_PRP_003",
+    "name": "Zero Toxicity Cold Gas for Educational 3U/6U",
+    "category": "propulsion",
+    "salience": 75,
+    "conditions": [
+      {
+        "fact_name": "mission_organization_type",
+        "operator": "==",
+        "value": "university"
+      },
+      {
+        "fact_name": "requires_propulsion",
+        "operator": "==",
+        "value": true
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "propulsion_type",
+        "value": "cold_gas_r134a_or_butane",
+        "category": "propulsion",
+        "description": "Inert propellant with zero toxic handling or thermal ignition hazards; simplest range safety approval"
+      }
+    ],
+    "rationale": "University teams face extreme regulatory hurdles with toxic or reactive propellants; cold gas is safest.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_PRP_004",
+    "name": "Deep Space Lunar Insertion Delta-V Requirement",
+    "category": "propulsion",
+    "salience": 95,
+    "conditions": [
+      {
+        "fact_name": "orbit_type",
+        "operator": "==",
+        "value": "lunar_orbit"
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "min_delta_v_budget_ms",
+        "value": 450.0,
+        "category": "propulsion",
+        "description": "Requires >= 450 m/s delta-V for Lunar Orbit Insertion (LOI) or weak stability boundary capture"
+      },
+      {
+        "fact_name": "propulsion_type",
+        "value": "high_efficiency_ion_or_bipropellant",
+        "category": "propulsion",
+        "description": "High density total impulse required"
+      }
+    ],
+    "rationale": "Entering lunar orbit from translunar injection demands substantial delta-V.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_SYN_001",
+    "name": "Payload-Power Compatibility Inconsistency Check",
+    "category": "system_validation",
+    "salience": 99,
+    "conditions": [
+      {
+        "fact_name": "peak_power_requirement_w",
+        "operator": ">=",
+        "value": 50.0
+      },
+      {
+        "fact_name": "form_factor",
+        "operator": "in",
+        "value": [
+          "1U",
+          "1.5U",
+          "2U"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "configuration_feasibility",
+        "value": "infeasible_overconstrained",
+        "category": "system_validation",
+        "description": "Physical conflict: 1U-2U form factor cannot generate or dissipate 50W of power"
+      },
+      {
+        "fact_name": "recommended_redesign",
+        "value": "upsize_to_6u_or_reduce_payload_duty_cycle",
+        "category": "system_validation",
+        "description": "Must increase spacecraft size to at least 6U"
+      }
+    ],
+    "rationale": "Violates physical conservation of surface area for solar collection and thermal rejection.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_SYN_002",
+    "name": "Payload Data Volume vs UHF Communication Mismatch",
+    "category": "system_validation",
+    "salience": 95,
+    "conditions": [
+      {
+        "fact_name": "daily_data_volume_mb",
+        "operator": ">=",
+        "value": 5000
+      },
+      {
+        "fact_name": "recommended_comm_downlink_band",
+        "operator": "==",
+        "value": "UHF"
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "downlink_bottleneck_alert",
+        "value": "severe_data_latency",
+        "category": "comm",
+        "description": "UHF link (9.6 kbps) would take > 50 days to download 1 day of data"
+      },
+      {
+        "fact_name": "recommended_comm_downlink_band",
+        "value": "X_Band",
+        "category": "comm",
+        "description": "Forced upgrade to X-band downlink to prevent memory buffer overflow"
+      }
+    ],
+    "rationale": "Data throughput mismatch: UHF link cannot service megabyte/gigabyte payload production rates.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_SYN_003",
+    "name": "Optical Instrument ADCS Stability Requirement Check",
+    "category": "system_validation",
+    "salience": 92,
+    "conditions": [
+      {
+        "fact_name": "payload_type",
+        "operator": "==",
+        "value": "earth_obs_optical_rgb"
+      },
+      {
+        "fact_name": "pointing_accuracy_requirement_deg",
+        "operator": ">",
+        "value": 1.0
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "optical_adcs_conflict",
+        "value": "smearing_risk",
+        "category": "adcs",
+        "description": "Pointing error > 1 deg causes severe ground target miss and motion blur"
+      },
+      {
+        "fact_name": "pointing_accuracy_requirement_deg",
+        "value": 0.1,
+        "category": "adcs",
+        "description": "Tightened pointing tolerance to 0.1 deg"
+      }
+    ],
+    "rationale": "Optical imaging from 500km altitude requires sub-0.1 degree stabilization during ground exposures.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_SYN_004",
+    "name": "Deep Space Ground Station Incompatibility Alert",
+    "category": "system_validation",
+    "salience": 98,
+    "conditions": [
+      {
+        "fact_name": "orbit_type",
+        "operator": "in",
+        "value": [
+          "lunar_orbit",
+          "interplanetary"
+        ]
+      },
+      {
+        "fact_name": "ground_network_type",
+        "operator": "!=",
+        "value": "deep_space_network"
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "ground_link_failure_risk",
+        "value": "unreachable_spacecraft",
+        "category": "comm",
+        "description": "Standard amateur or commercial LEO ground stations have insufficient G/T to receive beyond LEO"
+      },
+      {
+        "fact_name": "ground_network_type",
+        "value": "deep_space_network",
+        "category": "comm",
+        "description": "Forced switch to NASA Deep Space Network or ESA Estrack 35m stations"
+      }
+    ],
+    "rationale": "Inverse square free-space path loss to the Moon (>384,000 km) cannot close with standard 3m dishes.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_SYN_005",
+    "name": "Mass Margin Compliance Check",
+    "category": "system_validation",
+    "salience": 85,
+    "conditions": [
+      {
+        "fact_name": "estimated_dry_mass_kg",
+        "operator": ">",
+        "value": 0
+      },
+      {
+        "fact_name": "max_satellite_mass_kg",
+        "operator": ">",
+        "value": 0
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "mass_margin_status",
+        "value": "evaluated_against_20_percent_standard",
+        "category": "system_validation",
+        "description": "Ensures (M_max - M_dry) / M_max >= 20%"
+      }
+    ],
+    "rationale": "AIAA S-120 and NASA standard require 20% dry mass margin at Preliminary Design Review.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_OBC_001",
+    "name": "Fault-Tolerant OBC Architecture for High Radiation",
+    "category": "avionics",
+    "salience": 88,
+    "conditions": [
+      {
+        "fact_name": "radiation_environment",
+        "operator": "in",
+        "value": [
+          "high_radiation_hazard",
+          "deep_space_radiation"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "obc_fault_tolerant_mode",
+        "value": "triple_modular_redundancy_tmr",
+        "category": "avionics",
+        "description": "TMR architecture with voting logic mitigates single event upsets (SEUs)"
+      },
+      {
+        "fact_name": "fram_storage_recommended",
+        "value": true,
+        "category": "avionics",
+        "description": "Ferroelectric RAM resists radiation corruption better than standard Flash/SRAM"
+      }
+    ],
+    "rationale": "In high radiation zones, software SEUs will corrupt flight computer memory without hardware/software TMR.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_OBC_002",
+    "name": "COTS Microcontroller Architecture for Short LEO Mission",
+    "category": "avionics",
+    "salience": 70,
+    "conditions": [
+      {
+        "fact_name": "mission_organization_type",
+        "operator": "==",
+        "value": "university"
+      },
+      {
+        "fact_name": "radiation_environment",
+        "operator": "==",
+        "value": "low_leo_benign"
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "obc_architecture",
+        "value": "cots_arm_cortex_m4_dual_redundant",
+        "category": "avionics",
+        "description": "Cost-effective ARM Cortex-M4 flight computer with external watchdog supervisor"
+      }
+    ],
+    "rationale": "Short duration low-altitude university CubeSats can rely on COTS microcontrollers protected by watchdogs.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_SYS_001",
+    "name": "High Current Wiring Harness Safety Sizing",
+    "category": "system_validation",
+    "salience": 75,
+    "conditions": [
+      {
+        "fact_name": "peak_power_requirement_w",
+        "operator": ">=",
+        "value": 40.0
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "harness_wiring_gauge",
+        "value": "22_AWG_PTFE_insulated",
+        "category": "structure",
+        "description": "Prevents resistive thermal buildup in vacuum environment"
+      }
+    ],
+    "rationale": "Vacuum prevents convective cooling; undersized wires will overheat and melt insulation.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_SYS_002",
+    "name": "Autonomous Hard Reset Hardware Watchdog",
+    "category": "avionics",
+    "salience": 90,
+    "conditions": [
+      {
+        "fact_name": "mission_status",
+        "operator": "!=",
+        "value": "decommissioned"
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "hardware_watchdog_reset_timeout_hours",
+        "value": 24.0,
+        "category": "avionics",
+        "description": "Autonomous full EPS power-cycle reboot every 24 hours if heartbeat lost"
+      }
+    ],
+    "rationale": "Loss of contact from frozen flight computers is recovered by hardware-timed power cycle resets.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_SYN_006",
+    "name": "Comprehensive CubeSat Configuration Feasibility Signoff",
+    "category": "system_validation",
+    "salience": 50,
+    "conditions": [
+      {
+        "fact_name": "deorbit_regulation_compliant",
+        "operator": "==",
+        "value": true
+      },
+      {
+        "fact_name": "solar_panel_type",
+        "operator": "!=",
+        "value": null
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "orbitforge_mission_signoff",
+        "value": "verified_configuration",
+        "category": "system_validation",
+        "description": "Spacecraft configuration complies with mass, power, communication, and orbital disposal standards"
+      }
+    ],
+    "rationale": "Synthesizes subsystem assessments to produce formal mission viability rating.",
+    "reference": "NASA CubeSat 101 / ESA Guidelines"
+  },
+  {
+    "id": "RULE_PL_001",
+    "name": "Earth Observation RGB Ground Resolution Rule",
+    "category": "payload",
+    "salience": 80,
+    "conditions": [
+      {
+        "fact_name": "payload_type",
+        "operator": "==",
+        "value": "earth_obs_optical_rgb"
+      },
+      {
+        "fact_name": "orbit_altitude_km",
+        "operator": "<=",
+        "value": 500
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "achievable_gsd_m",
+        "value": 3.0,
+        "category": "payload",
+        "description": "Achievable Ground Sampling Distance <= 3 meters"
+      },
+      {
+        "fact_name": "payload_mass_kg",
+        "value": 1.8,
+        "category": "payload",
+        "description": "Allocated camera sensor mass"
+      }
+    ],
+    "rationale": "Sub-500km altitude allows aperture to achieve 3m GSD in optical spectrum.",
+    "reference": "NASA/ESA Guidelines"
+  },
+  {
+    "id": "RULE_PL_002",
+    "name": "Earth Observation High Altitude GSD Degradation",
+    "category": "payload",
+    "salience": 80,
+    "conditions": [
+      {
+        "fact_name": "payload_type",
+        "operator": "==",
+        "value": "earth_obs_optical_rgb"
+      },
+      {
+        "fact_name": "orbit_altitude_km",
+        "operator": ">",
+        "value": 700
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "achievable_gsd_m",
+        "value": 7.5,
+        "category": "payload",
+        "description": "Achievable Ground Sampling Distance degrades to 7-8 meters due to optical diffraction"
+      }
+    ],
+    "rationale": "Diffraction limits GSD proportionally to orbital altitude for a given optical aperture.",
+    "reference": "NASA/ESA Guidelines"
+  },
+  {
+    "id": "RULE_PL_003",
+    "name": "Hyperspectral Data Volume Calculation",
+    "category": "payload",
+    "salience": 85,
+    "conditions": [
+      {
+        "fact_name": "payload_type",
+        "operator": "==",
+        "value": "hyperspectral_imaging"
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "spectral_bands_count",
+        "value": 128,
+        "category": "payload",
+        "description": "128 contiguous spectral bands across VNIR/SWIR"
+      },
+      {
+        "fact_name": "daily_data_volume_mb",
+        "value": 80000,
+        "category": "payload",
+        "description": "Generates 80 GB per operational day requiring high-speed onboard compression"
+      }
+    ],
+    "rationale": "Hyperspectral data cubes generate immense raw data volumes per square kilometer.",
+    "reference": "NASA/ESA Guidelines"
+  },
+  {
+    "id": "RULE_PL_004",
+    "name": "SAR Pulse Repetition Frequency Power Draw",
+    "category": "payload",
+    "salience": 90,
+    "conditions": [
+      {
+        "fact_name": "payload_type",
+        "operator": "==",
+        "value": "synthetic_aperture_radar_sar"
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "peak_power_requirement_w",
+        "value": 120.0,
+        "category": "power",
+        "description": "Radar transmitter draws high peak power during active swath pass"
+      },
+      {
+        "fact_name": "duty_cycle_limit_percent",
+        "value": 5.0,
+        "category": "payload",
+        "description": "Operates at max 5% duty cycle to manage thermal dissipation"
+      },
+      {
+        "fact_name": "daily_data_volume_mb",
+        "value": 150000,
+        "category": "payload",
+        "description": "Daily radar raw data acquisition volume"
+      }
+    ],
+    "rationale": "Active microwave radar requires substantial RF transmit power, limited to short bursts.",
+    "reference": "NASA/ESA Guidelines"
+  },
+  {
+    "id": "RULE_PL_005",
+    "name": "Maritime AIS Receiver Antenna Selection",
+    "category": "payload",
+    "salience": 75,
+    "conditions": [
+      {
+        "fact_name": "payload_type",
+        "operator": "==",
+        "value": "iot_ais_receiver"
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "ais_antenna_type",
+        "value": "deployable_vhf_monopole_or_dipole",
+        "category": "payload",
+        "description": "Tuned to marine VHF frequencies 161.975 MHz and 162.025 MHz"
+      },
+      {
+        "fact_name": "daily_data_volume_mb",
+        "value": 300,
+        "category": "payload",
+        "description": "Downlinks 300 MB of processed ship position reports"
+      }
+    ],
+    "rationale": "Maritime AIS operates in marine VHF band requiring dedicated quarter-wave antennas.",
+    "reference": "NASA/ESA Guidelines"
+  },
+  {
+    "id": "RULE_PL_006",
+    "name": "Space Weather Dosimeter Low Resource Allocation",
+    "category": "payload",
+    "salience": 70,
+    "conditions": [
+      {
+        "fact_name": "payload_type",
+        "operator": "==",
+        "value": "radiation_dosimeter_dos"
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "payload_power_draw_w",
+        "value": 1.0,
+        "category": "payload",
+        "description": "Low power consumption enables continuous operation across all orbits"
+      },
+      {
+        "fact_name": "daily_data_volume_mb",
+        "value": 50,
+        "category": "payload",
+        "description": "Low data telemetry volume"
+      }
+    ],
+    "rationale": "Solid state silicon dosimeters have minimal power and volume footprints.",
+    "reference": "NASA/ESA Guidelines"
+  },
+  {
+    "id": "RULE_PL_007",
+    "name": "Atmospheric Langmuir Probe Boom Deployment",
+    "category": "payload",
+    "salience": 80,
+    "conditions": [
+      {
+        "fact_name": "payload_type",
+        "operator": "==",
+        "value": "langmuir_plasma_probe"
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "deployable_boom_length_m",
+        "value": 0.6,
+        "category": "structure",
+        "description": "Deployable boom required to place sensor outside spacecraft plasma sheath and charging wake"
+      }
+    ],
+    "rationale": "Langmuir probes measure ionospheric plasma density and must avoid satellite chassis contamination.",
+    "reference": "NASA/ESA Guidelines"
+  },
+  {
+    "id": "RULE_PL_008",
+    "name": "Gamma-Ray Burst Scintillator Shielding",
+    "category": "payload",
+    "salience": 85,
+    "conditions": [
+      {
+        "fact_name": "payload_type",
+        "operator": "==",
+        "value": "gamma_ray_burst_detector"
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "detector_shielding_material",
+        "value": "tantalum_bismuth_graded_shield",
+        "category": "payload",
+        "description": "Suppresses background cosmic radiation and secondary gamma rays"
+      }
+    ],
+    "rationale": "High-energy astrophysics detectors require passive graded shielding to achieve high signal-to-noise.",
+    "reference": "NASA/ESA Guidelines"
+  },
+  {
+    "id": "RULE_PL_009",
+    "name": "Thermal IR Detector Vacuum Enclosure",
+    "category": "payload",
+    "salience": 85,
+    "conditions": [
+      {
+        "fact_name": "payload_type",
+        "operator": "==",
+        "value": "earth_obs_thermal_tir"
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "dewar_assembly_type",
+        "value": "hermetic_micro_dewar",
+        "category": "thermal",
+        "description": "Isolates detector focal plane array from surrounding chassis radiative heat"
+      }
+    ],
+    "rationale": "Cryocooled IR sensors need vacuum dewar enclosures to prevent parasitic heat conduction.",
+    "reference": "NASA/ESA Guidelines"
+  },
+  {
+    "id": "RULE_PL_010",
+    "name": "Optical Payload Sun-Blind Protection Shutter",
+    "category": "payload",
+    "salience": 88,
+    "conditions": [
+      {
+        "fact_name": "payload_type",
+        "operator": "in",
+        "value": [
+          "earth_obs_optical_rgb",
+          "hyperspectral_imaging"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "safety_sun_shutter",
+        "value": "fail_closed_electro_mechanical_shutter",
+        "category": "payload",
+        "description": "Prevents direct solar burn-in on CMOS sensor during off-nominal tumbling"
+      }
+    ],
+    "rationale": "Accidental sun pointing during tumble will permanently destroy unshielded focal plane arrays.",
+    "reference": "NASA/ESA Guidelines"
+  },
+  {
+    "id": "RULE_ADC_008",
+    "name": "Reaction Wheel Sizing for 6U Platform",
+    "category": "adcs",
+    "salience": 75,
+    "conditions": [
+      {
+        "fact_name": "form_factor",
+        "operator": "==",
+        "value": "6U"
+      },
+      {
+        "fact_name": "adcs_actuator_type",
+        "operator": "==",
+        "value": "3_axis_reaction_wheel_cluster"
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "reaction_wheel_capacity_nms",
+        "value": 0.05,
+        "category": "adcs",
+        "description": "0.05 Nms momentum storage accommodates orbital gravity gradient and magnetic torques"
+      }
+    ],
+    "rationale": "6U satellites have typical moment of inertia requiring 0.02-0.05 Nms storage wheels.",
+    "reference": "NASA/ESA Guidelines"
+  },
+  {
+    "id": "RULE_ADC_009",
+    "name": "Reaction Wheel Sizing for 12U/16U Platform",
+    "category": "adcs",
+    "salience": 75,
+    "conditions": [
+      {
+        "fact_name": "form_factor",
+        "operator": "in",
+        "value": [
+          "12U",
+          "16U"
+        ]
+      },
+      {
+        "fact_name": "adcs_actuator_type",
+        "operator": "==",
+        "value": "3_axis_reaction_wheel_cluster"
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "reaction_wheel_capacity_nms",
+        "value": 0.2,
+        "category": "adcs",
+        "description": "0.20 Nms momentum storage wheels prevent premature saturation"
+      }
+    ],
+    "rationale": "Higher moments of inertia in 12U/16U platforms require wheels with larger angular momentum capacity.",
+    "reference": "NASA/ESA Guidelines"
+  },
+  {
+    "id": "RULE_ADC_010",
+    "name": "Star Tracker Boresight Redundancy",
+    "category": "adcs",
+    "salience": 80,
+    "conditions": [
+      {
+        "fact_name": "adcs_sensor_suite",
+        "operator": "==",
+        "value": "miniature_star_tracker_and_gyros"
+      },
+      {
+        "fact_name": "mission_duration_years",
+        "operator": ">=",
+        "value": 3.0
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "star_tracker_optical_heads",
+        "value": 2,
+        "category": "adcs",
+        "description": "Dual optical heads prevent attitude blind spots when Earth or Sun occludes one camera"
+      }
+    ],
+    "rationale": "Single star trackers lose attitude lock when the Earth limb or Sun enters their field of view.",
+    "reference": "NASA/ESA Guidelines"
+  },
+  {
+    "id": "RULE_ADC_011",
+    "name": "Magnetometer Deployment on Non-Magnetic Boom",
+    "category": "adcs",
+    "salience": 75,
+    "conditions": [
+      {
+        "fact_name": "adcs_sensor_suite",
+        "operator": "in",
+        "value": [
+          "sun_sensors_and_triaxial_magnetometer",
+          "miniature_star_tracker_and_gyros"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "magnetometer_isolation",
+        "value": "deployable_carbon_fiber_boom",
+        "category": "adcs",
+        "description": "Separates magnetometer from internal bus magnetic fields generated by batteries and solar panel currents"
+      }
+    ],
+    "rationale": "Internal satellite current loops produce parasitic magnetic fields that corrupt magnetometer measurements.",
+    "reference": "NASA/ESA Guidelines"
+  },
+  {
+    "id": "RULE_ADC_012",
+    "name": "Sun Sensor Glint Rejection Filtering",
+    "category": "adcs",
+    "salience": 70,
+    "conditions": [
+      {
+        "fact_name": "adcs_sensor_suite",
+        "operator": "in",
+        "value": [
+          "sun_sensors_and_triaxial_magnetometer"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "sun_sensor_processing",
+        "value": "earth_albedo_rejection_filter",
+        "category": "adcs",
+        "description": "Algorithms filter out Earth albedo reflections that spoof sun vector"
+      }
+    ],
+    "rationale": "Earth albedo reflection in LEO can confuse coarse photodiode sun sensors.",
+    "reference": "NASA/ESA Guidelines"
+  },
+  {
+    "id": "RULE_ADC_013",
+    "name": "Target Tracking Slew Rate Requirement",
+    "category": "adcs",
+    "salience": 82,
+    "conditions": [
+      {
+        "fact_name": "mission_type",
+        "operator": "in",
+        "value": [
+          "earth_observation",
+          "optical_imaging"
+        ]
+      },
+      {
+        "fact_name": "target_tracking_mode",
+        "operator": "==",
+        "value": "ground_station_spotlight"
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "min_slew_rate_deg_s",
+        "value": 2.5,
+        "category": "adcs",
+        "description": "Slew rate >= 2.5 deg/sec required to maintain camera pointing on ground target during overflight"
+      }
+    ],
+    "rationale": "Spotlight ground target imaging requires pitching backwards at up to 2-3 deg/sec to cancel orbital ground motion.",
+    "reference": "NASA/ESA Guidelines"
+  },
+  {
+    "id": "RULE_ADC_014",
+    "name": "Magnetic Torquer Sizing for High Altitude Desaturation",
+    "category": "adcs",
+    "salience": 72,
+    "conditions": [
+      {
+        "fact_name": "orbit_altitude_km",
+        "operator": ">=",
+        "value": 700
+      },
+      {
+        "fact_name": "adcs_actuator_type",
+        "operator": "==",
+        "value": "3_axis_reaction_wheel_cluster"
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "magnetorquer_scaling_factor",
+        "value": 1.5,
+        "category": "adcs",
+        "description": "Geomagnetic field decreases as 1/r^3; torque rods must be upsized by 50%"
+      }
+    ],
+    "rationale": "Earth's B-field weakens significantly at higher LEO altitudes, reducing desaturation torque.",
+    "reference": "NASA/ESA Guidelines"
+  },
+  {
+    "id": "RULE_COM_011",
+    "name": "UHF Link Budget Margin Check",
+    "category": "comm",
+    "salience": 75,
+    "conditions": [
+      {
+        "fact_name": "recommended_comm_downlink_band",
+        "operator": "==",
+        "value": "UHF"
+      },
+      {
+        "fact_name": "orbit_altitude_km",
+        "operator": "<=",
+        "value": 600
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "link_margin_uhf_db",
+        "value": 12.0,
+        "category": "comm",
+        "description": "Generous 12 dB link margin with 14 dBi Yagi ground station"
+      }
+    ],
+    "rationale": "UHF paths have low free-space path loss ensuring reliable communications even in degraded attitudes.",
+    "reference": "NASA/ESA Guidelines"
+  },
+  {
+    "id": "RULE_COM_012",
+    "name": "S-Band Transmit Power Amplification",
+    "category": "comm",
+    "salience": 78,
+    "conditions": [
+      {
+        "fact_name": "recommended_comm_downlink_band",
+        "operator": "==",
+        "value": "S_Band"
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "rf_power_amplifier_output_w",
+        "value": 2.0,
+        "category": "comm",
+        "description": "2W RF power output achieves 2 Mbps downlink to 3m dish"
+      }
+    ],
+    "rationale": "2W S-band transmitter provides robust link across 2000 km slant ranges.",
+    "reference": "NASA/ESA Guidelines"
+  },
+  {
+    "id": "RULE_COM_013",
+    "name": "X-Band Phased Array Beam Steering",
+    "category": "comm",
+    "salience": 84,
+    "conditions": [
+      {
+        "fact_name": "recommended_comm_downlink_band",
+        "operator": "==",
+        "value": "X_Band"
+      },
+      {
+        "fact_name": "spacecraft_agility",
+        "operator": "==",
+        "value": "low_agility"
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "antenna_beam_steering",
+        "value": "active_electronically_scanned_array_aesa",
+        "category": "comm",
+        "description": "Electronic beam steering steers RF link without rolling the entire spacecraft"
+      }
+    ],
+    "rationale": "AESA phased arrays permit high gain downlink while spacecraft keeps payload pointing nadir.",
+    "reference": "NASA/ESA Guidelines"
+  },
+  {
+    "id": "RULE_COM_014",
+    "name": "DVB-S2 Adaptive Coding and Modulation (ACM)",
+    "category": "comm",
+    "salience": 82,
+    "conditions": [
+      {
+        "fact_name": "recommended_comm_downlink_band",
+        "operator": "in",
+        "value": [
+          "X_Band",
+          "Ka_Band"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "modulation_standard",
+        "value": "dvb_s2_acm",
+        "category": "comm",
+        "description": "Dynamically adjusts modulation (QPSK to 32APSK) based on ground station elevation angle"
+      }
+    ],
+    "rationale": "DVB-S2 ACM increases pass data throughput by 80-120% over fixed modulation schemes.",
+    "reference": "NASA/ESA Guidelines"
+  },
+  {
+    "id": "RULE_COM_015",
+    "name": "Ground Station Contact Elevation Angle Cutoff",
+    "category": "comm",
+    "salience": 70,
+    "conditions": [
+      {
+        "fact_name": "mission_status",
+        "operator": "!=",
+        "value": "decommissioned"
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "min_elevation_angle_deg",
+        "value": 5.0,
+        "category": "comm",
+        "description": "Horizon cutoff set at 5 deg to prevent tropospheric multi-path and terrain blockage"
+      }
+    ],
+    "rationale": "Below 5 degrees elevation, tropospheric scintillation and thermal noise severely degrade link performance.",
+    "reference": "NASA/ESA Guidelines"
+  },
+  {
+    "id": "RULE_PWR_016",
+    "name": "Peak Power Battery Discharging Temperature Derating",
+    "category": "power",
+    "salience": 76,
+    "conditions": [
+      {
+        "fact_name": "average_power_consumption_w",
+        "operator": ">=",
+        "value": 30.0
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "battery_thermal_derating_factor",
+        "value": 0.8,
+        "category": "power",
+        "description": "High continuous discharge elevates internal battery cell temperature"
+      }
+    ],
+    "rationale": "Internal resistance I^2*R causes battery self-heating during high power discharges.",
+    "reference": "NASA/ESA Guidelines"
+  },
+  {
+    "id": "RULE_PWR_017",
+    "name": "Solar Array Shadowing Bypass Diodes",
+    "category": "power",
+    "salience": 88,
+    "conditions": [
+      {
+        "fact_name": "solar_panel_type",
+        "operator": "in",
+        "value": [
+          "deployable_panels",
+          "body_mounted"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "bypass_diode_topology",
+        "value": "schottky_diodes_per_cell_string",
+        "category": "power",
+        "description": "Prevents hot-spot destructive reverse breakdown if panel is partially shadowed by antenna/booms"
+      }
+    ],
+    "rationale": "Partial shadowing of a single solar cell forces it to dissipate reverse power, risking fire or burnout.",
+    "reference": "NASA/ESA Guidelines"
+  },
+  {
+    "id": "RULE_PWR_018",
+    "name": "CubeSat Maximum Power Point Tracking (MPPT)",
+    "category": "power",
+    "salience": 82,
+    "conditions": [
+      {
+        "fact_name": "form_factor",
+        "operator": "in",
+        "value": [
+          "3U",
+          "6U",
+          "12U",
+          "16U"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "solar_regulator_type",
+        "value": "digital_mppt_distributed",
+        "category": "power",
+        "description": "Increases energy harvest by 20-30% across wide solar cell thermal swings"
+      }
+    ],
+    "rationale": "Direct energy transfer loses energy as solar cell V_mp shifts drastically between -100C and +100C.",
+    "reference": "NASA/ESA Guidelines"
+  },
+  {
+    "id": "RULE_THM_006",
+    "name": "Payload Focal Plane Thermal Dissipation Path",
+    "category": "thermal",
+    "salience": 84,
+    "conditions": [
+      {
+        "fact_name": "payload_type",
+        "operator": "in",
+        "value": [
+          "earth_obs_optical_rgb",
+          "hyperspectral_imaging",
+          "earth_obs_thermal_tir"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "sensor_thermal_strap",
+        "value": "flexible_copper_or_pgs_strap",
+        "category": "thermal",
+        "description": "Conducts heat from sensor focal plane to satellite chassis radiator"
+      }
+    ],
+    "rationale": "CMOS sensors generate heat that degrades dark current noise if not sinked to the outer structure.",
+    "reference": "NASA/ESA Guidelines"
+  },
+  {
+    "id": "RULE_THM_007",
+    "name": "Battery Thermal Enclosure Multi-Layer Insulation",
+    "category": "thermal",
+    "salience": 78,
+    "conditions": [
+      {
+        "fact_name": "mission_duration_years",
+        "operator": ">=",
+        "value": 2.0
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "battery_mli_blanket",
+        "value": "5_layer_gold_mylar_blanket",
+        "category": "thermal",
+        "description": "Reduces heater energy demand by 60% during long winter eclipses"
+      }
+    ],
+    "rationale": "Thermal insulation around battery box conserves precious battery power in eclipse.",
+    "reference": "NASA/ESA Guidelines"
+  },
+  {
+    "id": "RULE_STR_016",
+    "name": "Anodized Aluminum 6061-T6 Chassis Specification",
+    "category": "structure",
+    "salience": 72,
+    "conditions": [
+      {
+        "fact_name": "form_factor",
+        "operator": "in",
+        "value": [
+          "1U",
+          "2U",
+          "3U",
+          "6U",
+          "12U"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "primary_structure_alloy",
+        "value": "aluminum_6061_t6_or_7075",
+        "category": "structure",
+        "description": "Space flight heritage alloy offering optimal strength-to-weight and thermal conductivity"
+      }
+    ],
+    "rationale": "6061-T6 is standard flight proven material for CubeSat primary load-bearing chassis.",
+    "reference": "NASA/ESA Guidelines"
+  },
+  {
+    "id": "RULE_STR_017",
+    "name": "Outgassing Material Selection Standard (CVCM & TML)",
+    "category": "structure",
+    "salience": 92,
+    "conditions": [
+      {
+        "fact_name": "payload_type",
+        "operator": "in",
+        "value": [
+          "earth_obs_optical_rgb",
+          "hyperspectral_imaging"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "outgassing_standard_nasa",
+        "value": "cvcm_under_0_1_percent_tml_under_1_percent",
+        "category": "structure",
+        "description": "Prevents volatile condensable organic deposition on telescope lenses and mirrors"
+      }
+    ],
+    "rationale": "Condensable outgassed materials in vacuum permanently coat optical surfaces.",
+    "reference": "NASA/ESA Guidelines"
+  },
+  {
+    "id": "RULE_SYS_003",
+    "name": "Autonomous Safe Hold Mode Definition",
+    "category": "system_validation",
+    "salience": 90,
+    "conditions": [
+      {
+        "fact_name": "mission_status",
+        "operator": "!=",
+        "value": "decommissioned"
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "safe_mode_orientation",
+        "value": "sun_pointing_safe_attitude",
+        "category": "adcs",
+        "description": "Orients solar arrays directly at Sun, turns off payload, activates low-rate beacon"
+      }
+    ],
+    "rationale": "Autonomous safe hold protects satellite from power depletion upon software or hardware anomalies.",
+    "reference": "NASA/ESA Guidelines"
+  },
+  {
+    "id": "RULE_SYS_004",
+    "name": "Total System Power Margin Signoff",
+    "category": "system_validation",
+    "salience": 88,
+    "conditions": [
+      {
+        "fact_name": "orbitforge_mission_signoff",
+        "operator": "==",
+        "value": "verified_configuration"
+      }
+    ],
+    "actions": [
+      {
+        "fact_name": "pdr_power_margin_compliant",
+        "value": true,
+        "category": "power",
+        "description": "Calculated power generation exceeds maximum operating profile with >25% margin"
+      }
+    ],
+    "rationale": "Ensures satellite meets AIAA / NASA design margin requirements for Preliminary Design Review.",
+    "reference": "NASA/ESA Guidelines"
+  }
+]

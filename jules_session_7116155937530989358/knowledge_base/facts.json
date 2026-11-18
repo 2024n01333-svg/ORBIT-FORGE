@@ -1,0 +1,3476 @@
+[
+  {
+    "id": "struct_mass_limit_0.5U",
+    "category": "structure",
+    "name": "mass_limit_0.5U",
+    "value": 0.8,
+    "unit": "kg",
+    "description": "Standard CDS maximum total mass for 0.5U CubeSat",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "struct_dim_0.5U",
+    "category": "structure",
+    "name": "dimensions_0.5U",
+    "value": "100x100x50",
+    "unit": "mm",
+    "description": "Standard exterior dimensions for 0.5U CubeSat",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "struct_payload_mass_cap_0.5U",
+    "category": "structure",
+    "name": "payload_mass_capacity_0.5U",
+    "value": 0.25,
+    "unit": "kg",
+    "description": "Typical internal payload mass allocation for 0.5U",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "struct_payload_vol_cap_0.5U",
+    "category": "structure",
+    "name": "payload_volume_capacity_0.5U",
+    "value": 0.2,
+    "unit": "U",
+    "description": "Available volume envelope for payload inside 0.5U",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "struct_mass_limit_1U",
+    "category": "structure",
+    "name": "mass_limit_1U",
+    "value": 1.33,
+    "unit": "kg",
+    "description": "Standard CDS maximum total mass for 1U CubeSat",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "struct_dim_1U",
+    "category": "structure",
+    "name": "dimensions_1U",
+    "value": "100x100x113.5",
+    "unit": "mm",
+    "description": "Standard exterior dimensions for 1U CubeSat",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "struct_payload_mass_cap_1U",
+    "category": "structure",
+    "name": "payload_mass_capacity_1U",
+    "value": 0.5,
+    "unit": "kg",
+    "description": "Typical internal payload mass allocation for 1U",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "struct_payload_vol_cap_1U",
+    "category": "structure",
+    "name": "payload_volume_capacity_1U",
+    "value": 0.5,
+    "unit": "U",
+    "description": "Available volume envelope for payload inside 1U",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "struct_mass_limit_1.5U",
+    "category": "structure",
+    "name": "mass_limit_1.5U",
+    "value": 2.0,
+    "unit": "kg",
+    "description": "Standard CDS maximum total mass for 1.5U CubeSat",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "struct_dim_1.5U",
+    "category": "structure",
+    "name": "dimensions_1.5U",
+    "value": "100x100x170",
+    "unit": "mm",
+    "description": "Standard exterior dimensions for 1.5U CubeSat",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "struct_payload_mass_cap_1.5U",
+    "category": "structure",
+    "name": "payload_mass_capacity_1.5U",
+    "value": 0.8,
+    "unit": "kg",
+    "description": "Typical internal payload mass allocation for 1.5U",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "struct_payload_vol_cap_1.5U",
+    "category": "structure",
+    "name": "payload_volume_capacity_1.5U",
+    "value": 0.75,
+    "unit": "U",
+    "description": "Available volume envelope for payload inside 1.5U",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "struct_mass_limit_2U",
+    "category": "structure",
+    "name": "mass_limit_2U",
+    "value": 2.66,
+    "unit": "kg",
+    "description": "Standard CDS maximum total mass for 2U CubeSat",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "struct_dim_2U",
+    "category": "structure",
+    "name": "dimensions_2U",
+    "value": "100x100x227",
+    "unit": "mm",
+    "description": "Standard exterior dimensions for 2U CubeSat",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "struct_payload_mass_cap_2U",
+    "category": "structure",
+    "name": "payload_mass_capacity_2U",
+    "value": 1.2,
+    "unit": "kg",
+    "description": "Typical internal payload mass allocation for 2U",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "struct_payload_vol_cap_2U",
+    "category": "structure",
+    "name": "payload_volume_capacity_2U",
+    "value": 1.0,
+    "unit": "U",
+    "description": "Available volume envelope for payload inside 2U",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "struct_mass_limit_3U",
+    "category": "structure",
+    "name": "mass_limit_3U",
+    "value": 4.0,
+    "unit": "kg",
+    "description": "Standard CDS maximum total mass for 3U CubeSat",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "struct_dim_3U",
+    "category": "structure",
+    "name": "dimensions_3U",
+    "value": "100x100x340.5",
+    "unit": "mm",
+    "description": "Standard exterior dimensions for 3U CubeSat",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "struct_payload_mass_cap_3U",
+    "category": "structure",
+    "name": "payload_mass_capacity_3U",
+    "value": 2.2,
+    "unit": "kg",
+    "description": "Typical internal payload mass allocation for 3U",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "struct_payload_vol_cap_3U",
+    "category": "structure",
+    "name": "payload_volume_capacity_3U",
+    "value": 1.8,
+    "unit": "U",
+    "description": "Available volume envelope for payload inside 3U",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "struct_mass_limit_6U",
+    "category": "structure",
+    "name": "mass_limit_6U",
+    "value": 8.0,
+    "unit": "kg",
+    "description": "Standard CDS maximum total mass for 6U CubeSat",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "struct_dim_6U",
+    "category": "structure",
+    "name": "dimensions_6U",
+    "value": "100x226.3x366",
+    "unit": "mm",
+    "description": "Standard exterior dimensions for 6U CubeSat",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "struct_payload_mass_cap_6U",
+    "category": "structure",
+    "name": "payload_mass_capacity_6U",
+    "value": 4.5,
+    "unit": "kg",
+    "description": "Typical internal payload mass allocation for 6U",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "struct_payload_vol_cap_6U",
+    "category": "structure",
+    "name": "payload_volume_capacity_6U",
+    "value": 4.0,
+    "unit": "U",
+    "description": "Available volume envelope for payload inside 6U",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "struct_mass_limit_8U",
+    "category": "structure",
+    "name": "mass_limit_8U",
+    "value": 10.6,
+    "unit": "kg",
+    "description": "Standard CDS maximum total mass for 8U CubeSat",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "struct_dim_8U",
+    "category": "structure",
+    "name": "dimensions_8U",
+    "value": "200x200x227",
+    "unit": "mm",
+    "description": "Standard exterior dimensions for 8U CubeSat",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "struct_payload_mass_cap_8U",
+    "category": "structure",
+    "name": "payload_mass_capacity_8U",
+    "value": 6.0,
+    "unit": "kg",
+    "description": "Typical internal payload mass allocation for 8U",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "struct_payload_vol_cap_8U",
+    "category": "structure",
+    "name": "payload_volume_capacity_8U",
+    "value": 5.5,
+    "unit": "U",
+    "description": "Available volume envelope for payload inside 8U",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "struct_mass_limit_12U",
+    "category": "structure",
+    "name": "mass_limit_12U",
+    "value": 16.0,
+    "unit": "kg",
+    "description": "Standard CDS maximum total mass for 12U CubeSat",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "struct_dim_12U",
+    "category": "structure",
+    "name": "dimensions_12U",
+    "value": "226.3x226.3x366",
+    "unit": "mm",
+    "description": "Standard exterior dimensions for 12U CubeSat",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "struct_payload_mass_cap_12U",
+    "category": "structure",
+    "name": "payload_mass_capacity_12U",
+    "value": 9.0,
+    "unit": "kg",
+    "description": "Typical internal payload mass allocation for 12U",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "struct_payload_vol_cap_12U",
+    "category": "structure",
+    "name": "payload_volume_capacity_12U",
+    "value": 8.0,
+    "unit": "U",
+    "description": "Available volume envelope for payload inside 12U",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "struct_mass_limit_16U",
+    "category": "structure",
+    "name": "mass_limit_16U",
+    "value": 24.0,
+    "unit": "kg",
+    "description": "Standard CDS maximum total mass for 16U CubeSat",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "struct_dim_16U",
+    "category": "structure",
+    "name": "dimensions_16U",
+    "value": "226.3x226.3x454",
+    "unit": "mm",
+    "description": "Standard exterior dimensions for 16U CubeSat",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "struct_payload_mass_cap_16U",
+    "category": "structure",
+    "name": "payload_mass_capacity_16U",
+    "value": 14.0,
+    "unit": "kg",
+    "description": "Typical internal payload mass allocation for 16U",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "struct_payload_vol_cap_16U",
+    "category": "structure",
+    "name": "payload_volume_capacity_16U",
+    "value": 11.5,
+    "unit": "U",
+    "description": "Available volume envelope for payload inside 16U",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "struct_mass_limit_27U",
+    "category": "structure",
+    "name": "mass_limit_27U",
+    "value": 40.0,
+    "unit": "kg",
+    "description": "Standard CDS maximum total mass for 27U CubeSat",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "struct_dim_27U",
+    "category": "structure",
+    "name": "dimensions_27U",
+    "value": "340.5x340.5x340.5",
+    "unit": "mm",
+    "description": "Standard exterior dimensions for 27U CubeSat",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "struct_payload_mass_cap_27U",
+    "category": "structure",
+    "name": "payload_mass_capacity_27U",
+    "value": 25.0,
+    "unit": "kg",
+    "description": "Typical internal payload mass allocation for 27U",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "struct_payload_vol_cap_27U",
+    "category": "structure",
+    "name": "payload_volume_capacity_27U",
+    "value": 20.0,
+    "unit": "U",
+    "description": "Available volume envelope for payload inside 27U",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "orbit_period_300km",
+    "category": "orbit",
+    "name": "period_at_300km",
+    "value": 90.5,
+    "unit": "min",
+    "description": "Orbital period at 300 km altitude circular orbit",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "orbit_eclipse_frac_300km",
+    "category": "orbit",
+    "name": "eclipse_fraction_at_300km",
+    "value": 0.4,
+    "unit": "fraction",
+    "description": "Fraction of orbit spent in Earth shadow at 300 km",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "orbit_lifetime_300km",
+    "category": "orbit",
+    "name": "passive_lifetime_at_300km",
+    "value": 0.08,
+    "unit": "years",
+    "description": "Ballistic orbital decay lifetime at 300 km (BC ~ 50 kg/m2)",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "orbit_rad_dose_300km",
+    "category": "orbit",
+    "name": "tid_per_year_at_300km",
+    "value": 0.3,
+    "unit": "krad/year",
+    "description": "Estimated total ionizing radiation dose at 300 km behind 2mm Al",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "orbit_period_350km",
+    "category": "orbit",
+    "name": "period_at_350km",
+    "value": 91.5,
+    "unit": "min",
+    "description": "Orbital period at 350 km altitude circular orbit",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "orbit_eclipse_frac_350km",
+    "category": "orbit",
+    "name": "eclipse_fraction_at_350km",
+    "value": 0.39,
+    "unit": "fraction",
+    "description": "Fraction of orbit spent in Earth shadow at 350 km",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "orbit_lifetime_350km",
+    "category": "orbit",
+    "name": "passive_lifetime_at_350km",
+    "value": 0.25,
+    "unit": "years",
+    "description": "Ballistic orbital decay lifetime at 350 km (BC ~ 50 kg/m2)",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "orbit_rad_dose_350km",
+    "category": "orbit",
+    "name": "tid_per_year_at_350km",
+    "value": 0.4,
+    "unit": "krad/year",
+    "description": "Estimated total ionizing radiation dose at 350 km behind 2mm Al",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "orbit_period_400km",
+    "category": "orbit",
+    "name": "period_at_400km",
+    "value": 92.5,
+    "unit": "min",
+    "description": "Orbital period at 400 km altitude circular orbit",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "orbit_eclipse_frac_400km",
+    "category": "orbit",
+    "name": "eclipse_fraction_at_400km",
+    "value": 0.38,
+    "unit": "fraction",
+    "description": "Fraction of orbit spent in Earth shadow at 400 km",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "orbit_lifetime_400km",
+    "category": "orbit",
+    "name": "passive_lifetime_at_400km",
+    "value": 0.8,
+    "unit": "years",
+    "description": "Ballistic orbital decay lifetime at 400 km (BC ~ 50 kg/m2)",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "orbit_rad_dose_400km",
+    "category": "orbit",
+    "name": "tid_per_year_at_400km",
+    "value": 0.6,
+    "unit": "krad/year",
+    "description": "Estimated total ionizing radiation dose at 400 km behind 2mm Al",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "orbit_period_450km",
+    "category": "orbit",
+    "name": "period_at_450km",
+    "value": 93.5,
+    "unit": "min",
+    "description": "Orbital period at 450 km altitude circular orbit",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "orbit_eclipse_frac_450km",
+    "category": "orbit",
+    "name": "eclipse_fraction_at_450km",
+    "value": 0.37,
+    "unit": "fraction",
+    "description": "Fraction of orbit spent in Earth shadow at 450 km",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "orbit_lifetime_450km",
+    "category": "orbit",
+    "name": "passive_lifetime_at_450km",
+    "value": 1.8,
+    "unit": "years",
+    "description": "Ballistic orbital decay lifetime at 450 km (BC ~ 50 kg/m2)",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "orbit_rad_dose_450km",
+    "category": "orbit",
+    "name": "tid_per_year_at_450km",
+    "value": 0.8,
+    "unit": "krad/year",
+    "description": "Estimated total ionizing radiation dose at 450 km behind 2mm Al",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "orbit_period_500km",
+    "category": "orbit",
+    "name": "period_at_500km",
+    "value": 94.6,
+    "unit": "min",
+    "description": "Orbital period at 500 km altitude circular orbit",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "orbit_eclipse_frac_500km",
+    "category": "orbit",
+    "name": "eclipse_fraction_at_500km",
+    "value": 0.36,
+    "unit": "fraction",
+    "description": "Fraction of orbit spent in Earth shadow at 500 km",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "orbit_lifetime_500km",
+    "category": "orbit",
+    "name": "passive_lifetime_at_500km",
+    "value": 4.5,
+    "unit": "years",
+    "description": "Ballistic orbital decay lifetime at 500 km (BC ~ 50 kg/m2)",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "orbit_rad_dose_500km",
+    "category": "orbit",
+    "name": "tid_per_year_at_500km",
+    "value": 1.1,
+    "unit": "krad/year",
+    "description": "Estimated total ionizing radiation dose at 500 km behind 2mm Al",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "orbit_period_550km",
+    "category": "orbit",
+    "name": "period_at_550km",
+    "value": 95.6,
+    "unit": "min",
+    "description": "Orbital period at 550 km altitude circular orbit",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "orbit_eclipse_frac_550km",
+    "category": "orbit",
+    "name": "eclipse_fraction_at_550km",
+    "value": 0.35,
+    "unit": "fraction",
+    "description": "Fraction of orbit spent in Earth shadow at 550 km",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "orbit_lifetime_550km",
+    "category": "orbit",
+    "name": "passive_lifetime_at_550km",
+    "value": 9.0,
+    "unit": "years",
+    "description": "Ballistic orbital decay lifetime at 550 km (BC ~ 50 kg/m2)",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "orbit_rad_dose_550km",
+    "category": "orbit",
+    "name": "tid_per_year_at_550km",
+    "value": 1.5,
+    "unit": "krad/year",
+    "description": "Estimated total ionizing radiation dose at 550 km behind 2mm Al",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "orbit_period_600km",
+    "category": "orbit",
+    "name": "period_at_600km",
+    "value": 96.7,
+    "unit": "min",
+    "description": "Orbital period at 600 km altitude circular orbit",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "orbit_eclipse_frac_600km",
+    "category": "orbit",
+    "name": "eclipse_fraction_at_600km",
+    "value": 0.35,
+    "unit": "fraction",
+    "description": "Fraction of orbit spent in Earth shadow at 600 km",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "orbit_lifetime_600km",
+    "category": "orbit",
+    "name": "passive_lifetime_at_600km",
+    "value": 18.0,
+    "unit": "years",
+    "description": "Ballistic orbital decay lifetime at 600 km (BC ~ 50 kg/m2)",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "orbit_rad_dose_600km",
+    "category": "orbit",
+    "name": "tid_per_year_at_600km",
+    "value": 2.1,
+    "unit": "krad/year",
+    "description": "Estimated total ionizing radiation dose at 600 km behind 2mm Al",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "orbit_period_700km",
+    "category": "orbit",
+    "name": "period_at_700km",
+    "value": 98.8,
+    "unit": "min",
+    "description": "Orbital period at 700 km altitude circular orbit",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "orbit_eclipse_frac_700km",
+    "category": "orbit",
+    "name": "eclipse_fraction_at_700km",
+    "value": 0.34,
+    "unit": "fraction",
+    "description": "Fraction of orbit spent in Earth shadow at 700 km",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "orbit_lifetime_700km",
+    "category": "orbit",
+    "name": "passive_lifetime_at_700km",
+    "value": 45.0,
+    "unit": "years",
+    "description": "Ballistic orbital decay lifetime at 700 km (BC ~ 50 kg/m2)",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "orbit_rad_dose_700km",
+    "category": "orbit",
+    "name": "tid_per_year_at_700km",
+    "value": 3.8,
+    "unit": "krad/year",
+    "description": "Estimated total ionizing radiation dose at 700 km behind 2mm Al",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "orbit_period_800km",
+    "category": "orbit",
+    "name": "period_at_800km",
+    "value": 100.9,
+    "unit": "min",
+    "description": "Orbital period at 800 km altitude circular orbit",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "orbit_eclipse_frac_800km",
+    "category": "orbit",
+    "name": "eclipse_fraction_at_800km",
+    "value": 0.33,
+    "unit": "fraction",
+    "description": "Fraction of orbit spent in Earth shadow at 800 km",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "orbit_lifetime_800km",
+    "category": "orbit",
+    "name": "passive_lifetime_at_800km",
+    "value": 120.0,
+    "unit": "years",
+    "description": "Ballistic orbital decay lifetime at 800 km (BC ~ 50 kg/m2)",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "orbit_rad_dose_800km",
+    "category": "orbit",
+    "name": "tid_per_year_at_800km",
+    "value": 6.5,
+    "unit": "krad/year",
+    "description": "Estimated total ionizing radiation dose at 800 km behind 2mm Al",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "orbit_period_1000km",
+    "category": "orbit",
+    "name": "period_at_1000km",
+    "value": 105.1,
+    "unit": "min",
+    "description": "Orbital period at 1000 km altitude circular orbit",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "orbit_eclipse_frac_1000km",
+    "category": "orbit",
+    "name": "eclipse_fraction_at_1000km",
+    "value": 0.32,
+    "unit": "fraction",
+    "description": "Fraction of orbit spent in Earth shadow at 1000 km",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "orbit_lifetime_1000km",
+    "category": "orbit",
+    "name": "passive_lifetime_at_1000km",
+    "value": 500.0,
+    "unit": "years",
+    "description": "Ballistic orbital decay lifetime at 1000 km (BC ~ 50 kg/m2)",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "orbit_rad_dose_1000km",
+    "category": "orbit",
+    "name": "tid_per_year_at_1000km",
+    "value": 15.0,
+    "unit": "krad/year",
+    "description": "Estimated total ionizing radiation dose at 1000 km behind 2mm Al",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pwr_cell_triple_junction_eff",
+    "category": "power",
+    "name": "solar_cell_triple_junction_efficiency",
+    "value": 29.5,
+    "unit": "%",
+    "description": "Beginning-of-life efficiency of GalnP/GaAs/Ge triple junction solar cells",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pwr_cell_quad_junction_eff",
+    "category": "power",
+    "name": "solar_cell_quad_junction_efficiency",
+    "value": 32.0,
+    "unit": "%",
+    "description": "Beginning-of-life efficiency of next-gen 4-junction solar cells",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pwr_solar_irradiance_am0",
+    "category": "power",
+    "name": "solar_constant_am0",
+    "value": 1361.0,
+    "unit": "W/m^2",
+    "description": "Air Mass Zero extraterrestrial solar constant at 1 AU",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pwr_solar_temp_coeff",
+    "category": "power",
+    "name": "solar_temp_power_coefficient",
+    "value": -0.002,
+    "unit": "/degC",
+    "description": "Power degradation per degree Celsius above 25C",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pwr_solar_radiation_degrad_yr",
+    "category": "power",
+    "name": "solar_rad_degradation_per_year",
+    "value": 0.025,
+    "unit": "fraction",
+    "description": "Annual photo-voltaic efficiency degradation due to radiation",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pwr_body_gen_0.5U",
+    "category": "power",
+    "name": "solar_body_mounted_power_0.5U",
+    "value": 1.2,
+    "unit": "W",
+    "description": "Estimated orbit-average generation from body-mounted panels on 0.5U CubeSat",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pwr_body_gen_1U",
+    "category": "power",
+    "name": "solar_body_mounted_power_1U",
+    "value": 2.4,
+    "unit": "W",
+    "description": "Estimated orbit-average generation from body-mounted panels on 1U CubeSat",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pwr_body_gen_1.5U",
+    "category": "power",
+    "name": "solar_body_mounted_power_1.5U",
+    "value": 3.6,
+    "unit": "W",
+    "description": "Estimated orbit-average generation from body-mounted panels on 1.5U CubeSat",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pwr_body_gen_2U",
+    "category": "power",
+    "name": "solar_body_mounted_power_2U",
+    "value": 4.8,
+    "unit": "W",
+    "description": "Estimated orbit-average generation from body-mounted panels on 2U CubeSat",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pwr_body_gen_3U",
+    "category": "power",
+    "name": "solar_body_mounted_power_3U",
+    "value": 7.5,
+    "unit": "W",
+    "description": "Estimated orbit-average generation from body-mounted panels on 3U CubeSat",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pwr_body_gen_6U",
+    "category": "power",
+    "name": "solar_body_mounted_power_6U",
+    "value": 18.0,
+    "unit": "W",
+    "description": "Estimated orbit-average generation from body-mounted panels on 6U CubeSat",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pwr_body_gen_8U",
+    "category": "power",
+    "name": "solar_body_mounted_power_8U",
+    "value": 24.0,
+    "unit": "W",
+    "description": "Estimated orbit-average generation from body-mounted panels on 8U CubeSat",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pwr_body_gen_12U",
+    "category": "power",
+    "name": "solar_body_mounted_power_12U",
+    "value": 35.0,
+    "unit": "W",
+    "description": "Estimated orbit-average generation from body-mounted panels on 12U CubeSat",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pwr_body_gen_16U",
+    "category": "power",
+    "name": "solar_body_mounted_power_16U",
+    "value": 48.0,
+    "unit": "W",
+    "description": "Estimated orbit-average generation from body-mounted panels on 16U CubeSat",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pwr_body_gen_27U",
+    "category": "power",
+    "name": "solar_body_mounted_power_27U",
+    "value": 85.0,
+    "unit": "W",
+    "description": "Estimated orbit-average generation from body-mounted panels on 27U CubeSat",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pwr_deployable_gen_1U",
+    "category": "power",
+    "name": "solar_deployable_power_1U",
+    "value": 7.0,
+    "unit": "W",
+    "description": "Estimated orbit-average generation from single/double deployable panels on 1U CubeSat",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pwr_deployable_gen_2U",
+    "category": "power",
+    "name": "solar_deployable_power_2U",
+    "value": 14.0,
+    "unit": "W",
+    "description": "Estimated orbit-average generation from single/double deployable panels on 2U CubeSat",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pwr_deployable_gen_3U",
+    "category": "power",
+    "name": "solar_deployable_power_3U",
+    "value": 24.0,
+    "unit": "W",
+    "description": "Estimated orbit-average generation from single/double deployable panels on 3U CubeSat",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pwr_deployable_gen_6U",
+    "category": "power",
+    "name": "solar_deployable_power_6U",
+    "value": 60.0,
+    "unit": "W",
+    "description": "Estimated orbit-average generation from single/double deployable panels on 6U CubeSat",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pwr_deployable_gen_8U",
+    "category": "power",
+    "name": "solar_deployable_power_8U",
+    "value": 80.0,
+    "unit": "W",
+    "description": "Estimated orbit-average generation from single/double deployable panels on 8U CubeSat",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pwr_deployable_gen_12U",
+    "category": "power",
+    "name": "solar_deployable_power_12U",
+    "value": 120.0,
+    "unit": "W",
+    "description": "Estimated orbit-average generation from single/double deployable panels on 12U CubeSat",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pwr_deployable_gen_16U",
+    "category": "power",
+    "name": "solar_deployable_power_16U",
+    "value": 170.0,
+    "unit": "W",
+    "description": "Estimated orbit-average generation from single/double deployable panels on 16U CubeSat",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pwr_deployable_gen_27U",
+    "category": "power",
+    "name": "solar_deployable_power_27U",
+    "value": 320.0,
+    "unit": "W",
+    "description": "Estimated orbit-average generation from single/double deployable panels on 27U CubeSat",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pwr_li_ion_18650_energy_density",
+    "category": "power",
+    "name": "li_ion_18650_energy_density",
+    "value": 240.0,
+    "unit": "Wh/kg",
+    "description": "Specific energy of space-grade 18650 Li-ion cells",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pwr_li_po_pouch_energy_density",
+    "category": "power",
+    "name": "li_po_pouch_energy_density",
+    "value": 210.0,
+    "unit": "Wh/kg",
+    "description": "Specific energy of space-grade Li-polymer pouch cells",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pwr_lifepo4_energy_density",
+    "category": "power",
+    "name": "lifepo4_energy_density",
+    "value": 140.0,
+    "unit": "Wh/kg",
+    "description": "Specific energy of Lithium Iron Phosphate (high cycle life)",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pwr_bat_dod_leo_cycling_limit",
+    "category": "power",
+    "name": "bat_dod_leo_cycling_limit",
+    "value": 0.3,
+    "unit": "fraction",
+    "description": "Recommended maximum depth of discharge for 5-year LEO mission (30,000 cycles)",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pwr_bat_dod_short_mission_limit",
+    "category": "power",
+    "name": "bat_dod_short_mission_limit",
+    "value": 0.6,
+    "unit": "fraction",
+    "description": "Recommended maximum depth of discharge for < 1 year mission",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pwr_bat_charge_efficiency",
+    "category": "power",
+    "name": "bat_charge_efficiency",
+    "value": 0.92,
+    "unit": "fraction",
+    "description": "Coulombic/energy efficiency of Li-ion battery charging circuit",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pwr_eps_converter_buck_efficiency",
+    "category": "power",
+    "name": "eps_converter_buck_efficiency",
+    "value": 0.9,
+    "unit": "fraction",
+    "description": "Typical efficiency of EPS step-down DC-DC voltage regulators",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pwr_eps_converter_boost_efficiency",
+    "category": "power",
+    "name": "eps_converter_boost_efficiency",
+    "value": 0.88,
+    "unit": "fraction",
+    "description": "Typical efficiency of EPS boost DC-DC voltage regulators",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pwr_bus_rail_3_3v",
+    "category": "power",
+    "name": "eps_bus_rail_3.3V",
+    "value": 3.3,
+    "unit": "V",
+    "description": "Standard regulated voltage line on CubeSat EPS bus (3.3V)",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pwr_bus_rail_5_0v",
+    "category": "power",
+    "name": "eps_bus_rail_5.0V",
+    "value": 5.0,
+    "unit": "V",
+    "description": "Standard regulated voltage line on CubeSat EPS bus (5.0V)",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pwr_bus_rail_12_0v",
+    "category": "power",
+    "name": "eps_bus_rail_12.0V",
+    "value": 12.0,
+    "unit": "V",
+    "description": "Standard regulated voltage line on CubeSat EPS bus (12.0V)",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pwr_bus_rail_28_0v",
+    "category": "power",
+    "name": "eps_bus_rail_28.0V",
+    "value": 28.0,
+    "unit": "V",
+    "description": "Standard regulated voltage line on CubeSat EPS bus (28.0V)",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "comm_freq_uhf",
+    "category": "comm",
+    "name": "frequency_band_uhf",
+    "value": "435-438 MHz",
+    "unit": "MHz/nm",
+    "description": "Allocated spectrum range for UHF",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "comm_rate_uhf",
+    "category": "comm",
+    "name": "max_data_rate_uhf",
+    "value": 9.6,
+    "unit": "kbps",
+    "description": "Typical downlink capability for CubeSat in UHF",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "comm_tx_pwr_uhf",
+    "category": "comm",
+    "name": "tx_rf_dc_power_uhf",
+    "value": 2.0,
+    "unit": "W",
+    "description": "Required DC electrical power during transmission for UHF",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "comm_path_loss_uhf",
+    "category": "comm",
+    "name": "free_space_path_loss_400km_uhf",
+    "value": 137.0,
+    "unit": "dB",
+    "description": "Free space path loss at 400km altitude for UHF",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "comm_freq_vhf",
+    "category": "comm",
+    "name": "frequency_band_vhf",
+    "value": "144-146 MHz",
+    "unit": "MHz/nm",
+    "description": "Allocated spectrum range for VHF",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "comm_rate_vhf",
+    "category": "comm",
+    "name": "max_data_rate_vhf",
+    "value": 1.2,
+    "unit": "kbps",
+    "description": "Typical downlink capability for CubeSat in VHF",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "comm_tx_pwr_vhf",
+    "category": "comm",
+    "name": "tx_rf_dc_power_vhf",
+    "value": 1.5,
+    "unit": "W",
+    "description": "Required DC electrical power during transmission for VHF",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "comm_path_loss_vhf",
+    "category": "comm",
+    "name": "free_space_path_loss_400km_vhf",
+    "value": 128.0,
+    "unit": "dB",
+    "description": "Free space path loss at 400km altitude for VHF",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "comm_freq_s_band",
+    "category": "comm",
+    "name": "frequency_band_s_band",
+    "value": "2.2-2.4 GHz",
+    "unit": "MHz/nm",
+    "description": "Allocated spectrum range for S_Band",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "comm_rate_s_band",
+    "category": "comm",
+    "name": "max_data_rate_s_band",
+    "value": 2000.0,
+    "unit": "kbps",
+    "description": "Typical downlink capability for CubeSat in S_Band",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "comm_tx_pwr_s_band",
+    "category": "comm",
+    "name": "tx_rf_dc_power_s_band",
+    "value": 8.0,
+    "unit": "W",
+    "description": "Required DC electrical power during transmission for S_Band",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "comm_path_loss_s_band",
+    "category": "comm",
+    "name": "free_space_path_loss_400km_s_band",
+    "value": 152.0,
+    "unit": "dB",
+    "description": "Free space path loss at 400km altitude for S_Band",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "comm_freq_x_band",
+    "category": "comm",
+    "name": "frequency_band_x_band",
+    "value": "8.0-8.4 GHz",
+    "unit": "MHz/nm",
+    "description": "Allocated spectrum range for X_Band",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "comm_rate_x_band",
+    "category": "comm",
+    "name": "max_data_rate_x_band",
+    "value": 50000.0,
+    "unit": "kbps",
+    "description": "Typical downlink capability for CubeSat in X_Band",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "comm_tx_pwr_x_band",
+    "category": "comm",
+    "name": "tx_rf_dc_power_x_band",
+    "value": 25.0,
+    "unit": "W",
+    "description": "Required DC electrical power during transmission for X_Band",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "comm_path_loss_x_band",
+    "category": "comm",
+    "name": "free_space_path_loss_400km_x_band",
+    "value": 163.0,
+    "unit": "dB",
+    "description": "Free space path loss at 400km altitude for X_Band",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "comm_freq_ka_band",
+    "category": "comm",
+    "name": "frequency_band_ka_band",
+    "value": "26.5-40 GHz",
+    "unit": "MHz/nm",
+    "description": "Allocated spectrum range for Ka_Band",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "comm_rate_ka_band",
+    "category": "comm",
+    "name": "max_data_rate_ka_band",
+    "value": 250000.0,
+    "unit": "kbps",
+    "description": "Typical downlink capability for CubeSat in Ka_Band",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "comm_tx_pwr_ka_band",
+    "category": "comm",
+    "name": "tx_rf_dc_power_ka_band",
+    "value": 45.0,
+    "unit": "W",
+    "description": "Required DC electrical power during transmission for Ka_Band",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "comm_path_loss_ka_band",
+    "category": "comm",
+    "name": "free_space_path_loss_400km_ka_band",
+    "value": 173.0,
+    "unit": "dB",
+    "description": "Free space path loss at 400km altitude for Ka_Band",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "comm_freq_optical",
+    "category": "comm",
+    "name": "frequency_band_optical",
+    "value": "1550 nm laser",
+    "unit": "MHz/nm",
+    "description": "Allocated spectrum range for Optical",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "comm_rate_optical",
+    "category": "comm",
+    "name": "max_data_rate_optical",
+    "value": 1000000.0,
+    "unit": "kbps",
+    "description": "Typical downlink capability for CubeSat in Optical",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "comm_tx_pwr_optical",
+    "category": "comm",
+    "name": "tx_rf_dc_power_optical",
+    "value": 30.0,
+    "unit": "W",
+    "description": "Required DC electrical power during transmission for Optical",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "comm_path_loss_optical",
+    "category": "comm",
+    "name": "free_space_path_loss_400km_optical",
+    "value": 240.0,
+    "unit": "dB",
+    "description": "Free space path loss at 400km altitude for Optical",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "comm_iara_amateur_coordination_time_months",
+    "category": "comm",
+    "name": "iara_amateur_coordination_time_months",
+    "value": 6,
+    "unit": "months",
+    "description": "Typical IARU amateur frequency coordination lead time",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "comm_itu_filing_lead_time_months",
+    "category": "comm",
+    "name": "itu_filing_lead_time_months",
+    "value": 18,
+    "unit": "months",
+    "description": "ITU spectrum filing cycle duration for non-amateur satellite frequencies",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "comm_ber_target_telemetry",
+    "category": "comm",
+    "name": "ber_target_telemetry",
+    "value": 1e-05,
+    "unit": "ratio",
+    "description": "Standard bit error rate target for telemetry and housekeeping links",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "comm_ber_target_payload_data",
+    "category": "comm",
+    "name": "ber_target_payload_data",
+    "value": 1e-06,
+    "unit": "ratio",
+    "description": "Standard bit error rate target for mission payload raw data download",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "comm_modulation_bpsk_spectral_eff",
+    "category": "comm",
+    "name": "modulation_bpsk_spectral_eff",
+    "value": 0.8,
+    "unit": "bps/Hz",
+    "description": "Spectral efficiency of BPSK modulation with root-raised cosine",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "comm_modulation_qpsk_spectral_eff",
+    "category": "comm",
+    "name": "modulation_qpsk_spectral_eff",
+    "value": 1.6,
+    "unit": "bps/Hz",
+    "description": "Spectral efficiency of QPSK modulation",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "comm_modulation_8psk_spectral_eff",
+    "category": "comm",
+    "name": "modulation_8psk_spectral_eff",
+    "value": 2.4,
+    "unit": "bps/Hz",
+    "description": "Spectral efficiency of 8PSK modulation",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "comm_gs_pass_duration_avg_leo",
+    "category": "comm",
+    "name": "gs_pass_duration_avg_leo",
+    "value": 8.5,
+    "unit": "minutes",
+    "description": "Average ground station visibility pass duration per contact in 500km LEO",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "comm_gs_passes_per_day_polar",
+    "category": "comm",
+    "name": "gs_passes_per_day_polar",
+    "value": 12.0,
+    "unit": "passes/day",
+    "description": "Ground passes per day for Svalbard / high-latitude ground stations in SSO",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "comm_gs_passes_per_day_mid_lat",
+    "category": "comm",
+    "name": "gs_passes_per_day_mid_lat",
+    "value": 4.0,
+    "unit": "passes/day",
+    "description": "Ground passes per day for mid-latitude ground stations in 45-55 deg inclination",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "comm_inter_sat_link_isl_power",
+    "category": "comm",
+    "name": "inter_sat_link_isl_power",
+    "value": 15.0,
+    "unit": "W",
+    "description": "Typical inter-satellite link radio power consumption",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "adcs_acc_passive_magnetic",
+    "category": "adcs",
+    "name": "pointing_accuracy_passive_magnetic",
+    "value": 15.0,
+    "unit": "deg",
+    "description": "Expected 3-sigma pointing accuracy for passive_magnetic",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "adcs_mass_passive_magnetic",
+    "category": "adcs",
+    "name": "mass_passive_magnetic",
+    "value": 0.15,
+    "unit": "kg",
+    "description": "Subsystem mass of passive_magnetic",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "adcs_pwr_passive_magnetic",
+    "category": "adcs",
+    "name": "power_consumption_passive_magnetic",
+    "value": 0.0,
+    "unit": "W",
+    "description": "Nominal operating power of passive_magnetic",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "adcs_vol_passive_magnetic",
+    "category": "adcs",
+    "name": "volume_passive_magnetic",
+    "value": 0.1,
+    "unit": "U",
+    "description": "Volume envelope requirement for passive_magnetic",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "adcs_jit_passive_magnetic",
+    "category": "adcs",
+    "name": "jitter_passive_magnetic",
+    "value": 2000.0,
+    "unit": "arcsec/s",
+    "description": "Spacecraft platform attitude stability / jitter for passive_magnetic",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "adcs_acc_gravity_gradient_boom",
+    "category": "adcs",
+    "name": "pointing_accuracy_gravity_gradient_boom",
+    "value": 10.0,
+    "unit": "deg",
+    "description": "Expected 3-sigma pointing accuracy for gravity_gradient_boom",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "adcs_mass_gravity_gradient_boom",
+    "category": "adcs",
+    "name": "mass_gravity_gradient_boom",
+    "value": 0.4,
+    "unit": "kg",
+    "description": "Subsystem mass of gravity_gradient_boom",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "adcs_pwr_gravity_gradient_boom",
+    "category": "adcs",
+    "name": "power_consumption_gravity_gradient_boom",
+    "value": 0.2,
+    "unit": "W",
+    "description": "Nominal operating power of gravity_gradient_boom",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "adcs_vol_gravity_gradient_boom",
+    "category": "adcs",
+    "name": "volume_gravity_gradient_boom",
+    "value": 0.2,
+    "unit": "U",
+    "description": "Volume envelope requirement for gravity_gradient_boom",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "adcs_jit_gravity_gradient_boom",
+    "category": "adcs",
+    "name": "jitter_gravity_gradient_boom",
+    "value": 1500.0,
+    "unit": "arcsec/s",
+    "description": "Spacecraft platform attitude stability / jitter for gravity_gradient_boom",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "adcs_acc_magnetorquer_only_active",
+    "category": "adcs",
+    "name": "pointing_accuracy_magnetorquer_only_active",
+    "value": 5.0,
+    "unit": "deg",
+    "description": "Expected 3-sigma pointing accuracy for magnetorquer_only_active",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "adcs_mass_magnetorquer_only_active",
+    "category": "adcs",
+    "name": "mass_magnetorquer_only_active",
+    "value": 0.5,
+    "unit": "kg",
+    "description": "Subsystem mass of magnetorquer_only_active",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "adcs_pwr_magnetorquer_only_active",
+    "category": "adcs",
+    "name": "power_consumption_magnetorquer_only_active",
+    "value": 1.5,
+    "unit": "W",
+    "description": "Nominal operating power of magnetorquer_only_active",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "adcs_vol_magnetorquer_only_active",
+    "category": "adcs",
+    "name": "volume_magnetorquer_only_active",
+    "value": 0.3,
+    "unit": "U",
+    "description": "Volume envelope requirement for magnetorquer_only_active",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "adcs_jit_magnetorquer_only_active",
+    "category": "adcs",
+    "name": "jitter_magnetorquer_only_active",
+    "value": 800.0,
+    "unit": "arcsec/s",
+    "description": "Spacecraft platform attitude stability / jitter for magnetorquer_only_active",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "adcs_acc_3_axis_reaction_wheels",
+    "category": "adcs",
+    "name": "pointing_accuracy_3_axis_reaction_wheels",
+    "value": 0.2,
+    "unit": "deg",
+    "description": "Expected 3-sigma pointing accuracy for 3_axis_reaction_wheels",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "adcs_mass_3_axis_reaction_wheels",
+    "category": "adcs",
+    "name": "mass_3_axis_reaction_wheels",
+    "value": 1.2,
+    "unit": "kg",
+    "description": "Subsystem mass of 3_axis_reaction_wheels",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "adcs_pwr_3_axis_reaction_wheels",
+    "category": "adcs",
+    "name": "power_consumption_3_axis_reaction_wheels",
+    "value": 4.5,
+    "unit": "W",
+    "description": "Nominal operating power of 3_axis_reaction_wheels",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "adcs_vol_3_axis_reaction_wheels",
+    "category": "adcs",
+    "name": "volume_3_axis_reaction_wheels",
+    "value": 0.6,
+    "unit": "U",
+    "description": "Volume envelope requirement for 3_axis_reaction_wheels",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "adcs_jit_3_axis_reaction_wheels",
+    "category": "adcs",
+    "name": "jitter_3_axis_reaction_wheels",
+    "value": 30.0,
+    "unit": "arcsec/s",
+    "description": "Spacecraft platform attitude stability / jitter for 3_axis_reaction_wheels",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "adcs_acc_star_tracker_fine_pointing",
+    "category": "adcs",
+    "name": "pointing_accuracy_star_tracker_fine_pointing",
+    "value": 0.005,
+    "unit": "deg",
+    "description": "Expected 3-sigma pointing accuracy for star_tracker_fine_pointing",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "adcs_mass_star_tracker_fine_pointing",
+    "category": "adcs",
+    "name": "mass_star_tracker_fine_pointing",
+    "value": 2.0,
+    "unit": "kg",
+    "description": "Subsystem mass of star_tracker_fine_pointing",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "adcs_pwr_star_tracker_fine_pointing",
+    "category": "adcs",
+    "name": "power_consumption_star_tracker_fine_pointing",
+    "value": 8.0,
+    "unit": "W",
+    "description": "Nominal operating power of star_tracker_fine_pointing",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "adcs_vol_star_tracker_fine_pointing",
+    "category": "adcs",
+    "name": "volume_star_tracker_fine_pointing",
+    "value": 1.2,
+    "unit": "U",
+    "description": "Volume envelope requirement for star_tracker_fine_pointing",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "adcs_jit_star_tracker_fine_pointing",
+    "category": "adcs",
+    "name": "jitter_star_tracker_fine_pointing",
+    "value": 1.5,
+    "unit": "arcsec/s",
+    "description": "Spacecraft platform attitude stability / jitter for star_tracker_fine_pointing",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "adcs_acc_cmn_gimbal_cmg",
+    "category": "adcs",
+    "name": "pointing_accuracy_cmn_gimbal_cmg",
+    "value": 0.003,
+    "unit": "deg",
+    "description": "Expected 3-sigma pointing accuracy for cmn_gimbal_cmg",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "adcs_mass_cmn_gimbal_cmg",
+    "category": "adcs",
+    "name": "mass_cmn_gimbal_cmg",
+    "value": 3.8,
+    "unit": "kg",
+    "description": "Subsystem mass of cmn_gimbal_cmg",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "adcs_pwr_cmn_gimbal_cmg",
+    "category": "adcs",
+    "name": "power_consumption_cmn_gimbal_cmg",
+    "value": 18.0,
+    "unit": "W",
+    "description": "Nominal operating power of cmn_gimbal_cmg",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "adcs_vol_cmn_gimbal_cmg",
+    "category": "adcs",
+    "name": "volume_cmn_gimbal_cmg",
+    "value": 2.5,
+    "unit": "U",
+    "description": "Volume envelope requirement for cmn_gimbal_cmg",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "adcs_jit_cmn_gimbal_cmg",
+    "category": "adcs",
+    "name": "jitter_cmn_gimbal_cmg",
+    "value": 1.0,
+    "unit": "arcsec/s",
+    "description": "Spacecraft platform attitude stability / jitter for cmn_gimbal_cmg",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "adcs_sun_sensor_coarse_acc",
+    "category": "adcs",
+    "name": "sun_sensor_coarse_acc",
+    "value": 3.0,
+    "unit": "deg",
+    "description": "Accuracy of coarse photodiode sun sensors",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "adcs_sun_sensor_fine_acc",
+    "category": "adcs",
+    "name": "sun_sensor_fine_acc",
+    "value": 0.1,
+    "unit": "deg",
+    "description": "Accuracy of fine digital CMOS sun sensors",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "adcs_earth_horizon_sensor_acc",
+    "category": "adcs",
+    "name": "earth_horizon_sensor_acc",
+    "value": 0.25,
+    "unit": "deg",
+    "description": "Accuracy of infrared thermopile Earth horizon sensors",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "adcs_star_tracker_boresight_acc",
+    "category": "adcs",
+    "name": "star_tracker_boresight_acc",
+    "value": 2.0,
+    "unit": "arcsec",
+    "description": "Cross-boresight pointing measurement accuracy of miniature star trackers",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "adcs_mems_gyro_bias_instability",
+    "category": "adcs",
+    "name": "mems_gyro_bias_instability",
+    "value": 5.0,
+    "unit": "deg/hr",
+    "description": "In-run bias instability of tactical grade MEMS rate gyroscopes",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "adcs_magnetometer_noise_floor",
+    "category": "adcs",
+    "name": "magnetometer_noise_floor",
+    "value": 15.0,
+    "unit": "nT",
+    "description": "Noise floor of 3-axis anisotropic magnetoresistive magnetometer",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "adcs_reaction_wheel_max_momentum_0_1nm",
+    "category": "adcs",
+    "name": "reaction_wheel_max_momentum_0_1nm",
+    "value": 0.05,
+    "unit": "Nms",
+    "description": "Angular momentum storage capacity for 1U-3U scale reaction wheels",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "adcs_reaction_wheel_max_momentum_6_12u",
+    "category": "adcs",
+    "name": "reaction_wheel_max_momentum_6_12u",
+    "value": 0.25,
+    "unit": "Nms",
+    "description": "Angular momentum storage capacity for 6U-12U scale reaction wheels",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "adcs_magnetorquer_magnetic_dipole_moment",
+    "category": "adcs",
+    "name": "magnetorquer_magnetic_dipole_moment",
+    "value": 0.2,
+    "unit": "A*m^2",
+    "description": "Magnetic dipole moment per axis for CubeSat air-core / rod torquers",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "adcs_slew_rate_rw_standard",
+    "category": "adcs",
+    "name": "slew_rate_rw_standard",
+    "value": 3.0,
+    "unit": "deg/sec",
+    "description": "Maximum slew rate capability using 3-axis reaction wheel cluster",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pl_min_vol_earth_obs_optical_rgb",
+    "category": "payload",
+    "name": "min_volume_earth_obs_optical_rgb",
+    "value": 1.5,
+    "unit": "U",
+    "description": "Minimum payload volume requirement for earth_obs_optical_rgb",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pl_mass_earth_obs_optical_rgb",
+    "category": "payload",
+    "name": "mass_earth_obs_optical_rgb",
+    "value": 1.8,
+    "unit": "kg",
+    "description": "Subsystem payload mass for earth_obs_optical_rgb",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pl_pwr_earth_obs_optical_rgb",
+    "category": "payload",
+    "name": "operating_power_earth_obs_optical_rgb",
+    "value": 6.0,
+    "unit": "W",
+    "description": "Operating electrical power draw for earth_obs_optical_rgb",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pl_data_earth_obs_optical_rgb",
+    "category": "payload",
+    "name": "daily_data_volume_earth_obs_optical_rgb",
+    "value": 15000,
+    "unit": "MB/day",
+    "description": "Generated raw payload data volume per day for earth_obs_optical_rgb",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pl_point_earth_obs_optical_rgb",
+    "category": "payload",
+    "name": "required_pointing_accuracy_earth_obs_optical_rgb",
+    "value": 0.5,
+    "unit": "deg",
+    "description": "Spacecraft attitude pointing tolerance for earth_obs_optical_rgb",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pl_min_vol_earth_obs_hyperspectral",
+    "category": "payload",
+    "name": "min_volume_earth_obs_hyperspectral",
+    "value": 3.0,
+    "unit": "U",
+    "description": "Minimum payload volume requirement for earth_obs_hyperspectral",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pl_mass_earth_obs_hyperspectral",
+    "category": "payload",
+    "name": "mass_earth_obs_hyperspectral",
+    "value": 3.5,
+    "unit": "kg",
+    "description": "Subsystem payload mass for earth_obs_hyperspectral",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pl_pwr_earth_obs_hyperspectral",
+    "category": "payload",
+    "name": "operating_power_earth_obs_hyperspectral",
+    "value": 18.0,
+    "unit": "W",
+    "description": "Operating electrical power draw for earth_obs_hyperspectral",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pl_data_earth_obs_hyperspectral",
+    "category": "payload",
+    "name": "daily_data_volume_earth_obs_hyperspectral",
+    "value": 80000,
+    "unit": "MB/day",
+    "description": "Generated raw payload data volume per day for earth_obs_hyperspectral",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pl_point_earth_obs_hyperspectral",
+    "category": "payload",
+    "name": "required_pointing_accuracy_earth_obs_hyperspectral",
+    "value": 0.1,
+    "unit": "deg",
+    "description": "Spacecraft attitude pointing tolerance for earth_obs_hyperspectral",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pl_min_vol_earth_obs_thermal_tir",
+    "category": "payload",
+    "name": "min_volume_earth_obs_thermal_tir",
+    "value": 2.0,
+    "unit": "U",
+    "description": "Minimum payload volume requirement for earth_obs_thermal_tir",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pl_mass_earth_obs_thermal_tir",
+    "category": "payload",
+    "name": "mass_earth_obs_thermal_tir",
+    "value": 2.2,
+    "unit": "kg",
+    "description": "Subsystem payload mass for earth_obs_thermal_tir",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pl_pwr_earth_obs_thermal_tir",
+    "category": "payload",
+    "name": "operating_power_earth_obs_thermal_tir",
+    "value": 12.0,
+    "unit": "W",
+    "description": "Operating electrical power draw for earth_obs_thermal_tir",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pl_data_earth_obs_thermal_tir",
+    "category": "payload",
+    "name": "daily_data_volume_earth_obs_thermal_tir",
+    "value": 25000,
+    "unit": "MB/day",
+    "description": "Generated raw payload data volume per day for earth_obs_thermal_tir",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pl_point_earth_obs_thermal_tir",
+    "category": "payload",
+    "name": "required_pointing_accuracy_earth_obs_thermal_tir",
+    "value": 0.2,
+    "unit": "deg",
+    "description": "Spacecraft attitude pointing tolerance for earth_obs_thermal_tir",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pl_min_vol_synthetic_aperture_radar_sar",
+    "category": "payload",
+    "name": "min_volume_synthetic_aperture_radar_sar",
+    "value": 6.0,
+    "unit": "U",
+    "description": "Minimum payload volume requirement for synthetic_aperture_radar_sar",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pl_mass_synthetic_aperture_radar_sar",
+    "category": "payload",
+    "name": "mass_synthetic_aperture_radar_sar",
+    "value": 6.5,
+    "unit": "kg",
+    "description": "Subsystem payload mass for synthetic_aperture_radar_sar",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pl_pwr_synthetic_aperture_radar_sar",
+    "category": "payload",
+    "name": "operating_power_synthetic_aperture_radar_sar",
+    "value": 85.0,
+    "unit": "W",
+    "description": "Operating electrical power draw for synthetic_aperture_radar_sar",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pl_data_synthetic_aperture_radar_sar",
+    "category": "payload",
+    "name": "daily_data_volume_synthetic_aperture_radar_sar",
+    "value": 150000,
+    "unit": "MB/day",
+    "description": "Generated raw payload data volume per day for synthetic_aperture_radar_sar",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pl_point_synthetic_aperture_radar_sar",
+    "category": "payload",
+    "name": "required_pointing_accuracy_synthetic_aperture_radar_sar",
+    "value": 0.05,
+    "unit": "deg",
+    "description": "Spacecraft attitude pointing tolerance for synthetic_aperture_radar_sar",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pl_min_vol_iot_ais_receiver",
+    "category": "payload",
+    "name": "min_volume_iot_ais_receiver",
+    "value": 0.5,
+    "unit": "U",
+    "description": "Minimum payload volume requirement for iot_ais_receiver",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pl_mass_iot_ais_receiver",
+    "category": "payload",
+    "name": "mass_iot_ais_receiver",
+    "value": 0.4,
+    "unit": "kg",
+    "description": "Subsystem payload mass for iot_ais_receiver",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pl_pwr_iot_ais_receiver",
+    "category": "payload",
+    "name": "operating_power_iot_ais_receiver",
+    "value": 2.5,
+    "unit": "W",
+    "description": "Operating electrical power draw for iot_ais_receiver",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pl_data_iot_ais_receiver",
+    "category": "payload",
+    "name": "daily_data_volume_iot_ais_receiver",
+    "value": 300,
+    "unit": "MB/day",
+    "description": "Generated raw payload data volume per day for iot_ais_receiver",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pl_point_iot_ais_receiver",
+    "category": "payload",
+    "name": "required_pointing_accuracy_iot_ais_receiver",
+    "value": 15.0,
+    "unit": "deg",
+    "description": "Spacecraft attitude pointing tolerance for iot_ais_receiver",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pl_min_vol_iot_lora_transceiver",
+    "category": "payload",
+    "name": "min_volume_iot_lora_transceiver",
+    "value": 0.5,
+    "unit": "U",
+    "description": "Minimum payload volume requirement for iot_lora_transceiver",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pl_mass_iot_lora_transceiver",
+    "category": "payload",
+    "name": "mass_iot_lora_transceiver",
+    "value": 0.35,
+    "unit": "kg",
+    "description": "Subsystem payload mass for iot_lora_transceiver",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pl_pwr_iot_lora_transceiver",
+    "category": "payload",
+    "name": "operating_power_iot_lora_transceiver",
+    "value": 3.0,
+    "unit": "W",
+    "description": "Operating electrical power draw for iot_lora_transceiver",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pl_data_iot_lora_transceiver",
+    "category": "payload",
+    "name": "daily_data_volume_iot_lora_transceiver",
+    "value": 150,
+    "unit": "MB/day",
+    "description": "Generated raw payload data volume per day for iot_lora_transceiver",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pl_point_iot_lora_transceiver",
+    "category": "payload",
+    "name": "required_pointing_accuracy_iot_lora_transceiver",
+    "value": 15.0,
+    "unit": "deg",
+    "description": "Spacecraft attitude pointing tolerance for iot_lora_transceiver",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pl_min_vol_radiation_dosimeter_dos",
+    "category": "payload",
+    "name": "min_volume_radiation_dosimeter_dos",
+    "value": 0.3,
+    "unit": "U",
+    "description": "Minimum payload volume requirement for radiation_dosimeter_dos",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pl_mass_radiation_dosimeter_dos",
+    "category": "payload",
+    "name": "mass_radiation_dosimeter_dos",
+    "value": 0.2,
+    "unit": "kg",
+    "description": "Subsystem payload mass for radiation_dosimeter_dos",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pl_pwr_radiation_dosimeter_dos",
+    "category": "payload",
+    "name": "operating_power_radiation_dosimeter_dos",
+    "value": 1.0,
+    "unit": "W",
+    "description": "Operating electrical power draw for radiation_dosimeter_dos",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pl_data_radiation_dosimeter_dos",
+    "category": "payload",
+    "name": "daily_data_volume_radiation_dosimeter_dos",
+    "value": 50,
+    "unit": "MB/day",
+    "description": "Generated raw payload data volume per day for radiation_dosimeter_dos",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pl_point_radiation_dosimeter_dos",
+    "category": "payload",
+    "name": "required_pointing_accuracy_radiation_dosimeter_dos",
+    "value": 30.0,
+    "unit": "deg",
+    "description": "Spacecraft attitude pointing tolerance for radiation_dosimeter_dos",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pl_min_vol_langmuir_plasma_probe",
+    "category": "payload",
+    "name": "min_volume_langmuir_plasma_probe",
+    "value": 0.5,
+    "unit": "U",
+    "description": "Minimum payload volume requirement for langmuir_plasma_probe",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pl_mass_langmuir_plasma_probe",
+    "category": "payload",
+    "name": "mass_langmuir_plasma_probe",
+    "value": 0.4,
+    "unit": "kg",
+    "description": "Subsystem payload mass for langmuir_plasma_probe",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pl_pwr_langmuir_plasma_probe",
+    "category": "payload",
+    "name": "operating_power_langmuir_plasma_probe",
+    "value": 2.0,
+    "unit": "W",
+    "description": "Operating electrical power draw for langmuir_plasma_probe",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pl_data_langmuir_plasma_probe",
+    "category": "payload",
+    "name": "daily_data_volume_langmuir_plasma_probe",
+    "value": 120,
+    "unit": "MB/day",
+    "description": "Generated raw payload data volume per day for langmuir_plasma_probe",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pl_point_langmuir_plasma_probe",
+    "category": "payload",
+    "name": "required_pointing_accuracy_langmuir_plasma_probe",
+    "value": 10.0,
+    "unit": "deg",
+    "description": "Spacecraft attitude pointing tolerance for langmuir_plasma_probe",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pl_min_vol_gamma_ray_burst_detector",
+    "category": "payload",
+    "name": "min_volume_gamma_ray_burst_detector",
+    "value": 2.0,
+    "unit": "U",
+    "description": "Minimum payload volume requirement for gamma_ray_burst_detector",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pl_mass_gamma_ray_burst_detector",
+    "category": "payload",
+    "name": "mass_gamma_ray_burst_detector",
+    "value": 2.5,
+    "unit": "kg",
+    "description": "Subsystem payload mass for gamma_ray_burst_detector",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pl_pwr_gamma_ray_burst_detector",
+    "category": "payload",
+    "name": "operating_power_gamma_ray_burst_detector",
+    "value": 7.0,
+    "unit": "W",
+    "description": "Operating electrical power draw for gamma_ray_burst_detector",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pl_data_gamma_ray_burst_detector",
+    "category": "payload",
+    "name": "daily_data_volume_gamma_ray_burst_detector",
+    "value": 1200,
+    "unit": "MB/day",
+    "description": "Generated raw payload data volume per day for gamma_ray_burst_detector",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pl_point_gamma_ray_burst_detector",
+    "category": "payload",
+    "name": "required_pointing_accuracy_gamma_ray_burst_detector",
+    "value": 5.0,
+    "unit": "deg",
+    "description": "Spacecraft attitude pointing tolerance for gamma_ray_burst_detector",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pl_min_vol_biology_microfluidics_lab",
+    "category": "payload",
+    "name": "min_volume_biology_microfluidics_lab",
+    "value": 2.5,
+    "unit": "U",
+    "description": "Minimum payload volume requirement for biology_microfluidics_lab",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pl_mass_biology_microfluidics_lab",
+    "category": "payload",
+    "name": "mass_biology_microfluidics_lab",
+    "value": 2.8,
+    "unit": "kg",
+    "description": "Subsystem payload mass for biology_microfluidics_lab",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pl_pwr_biology_microfluidics_lab",
+    "category": "payload",
+    "name": "operating_power_biology_microfluidics_lab",
+    "value": 15.0,
+    "unit": "W",
+    "description": "Operating electrical power draw for biology_microfluidics_lab",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pl_data_biology_microfluidics_lab",
+    "category": "payload",
+    "name": "daily_data_volume_biology_microfluidics_lab",
+    "value": 2000,
+    "unit": "MB/day",
+    "description": "Generated raw payload data volume per day for biology_microfluidics_lab",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "pl_point_biology_microfluidics_lab",
+    "category": "payload",
+    "name": "required_pointing_accuracy_biology_microfluidics_lab",
+    "value": 15.0,
+    "unit": "deg",
+    "description": "Spacecraft attitude pointing tolerance for biology_microfluidics_lab",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "thermal_prop_alodine_aluminum_emissivity",
+    "category": "thermal",
+    "name": "alodine_aluminum_emissivity",
+    "value": 0.08,
+    "unit": "ratio",
+    "description": "Infrared emissivity of bare alodined 6061 aluminum structure",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "thermal_prop_alodine_aluminum_absorptivity",
+    "category": "thermal",
+    "name": "alodine_aluminum_absorptivity",
+    "value": 0.35,
+    "unit": "ratio",
+    "description": "Solar absorptivity of bare alodined 6061 aluminum structure",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "thermal_prop_black_anodize_emissivity",
+    "category": "thermal",
+    "name": "black_anodize_emissivity",
+    "value": 0.88,
+    "unit": "ratio",
+    "description": "Infrared emissivity of black anodized structural panels",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "thermal_prop_black_anodize_absorptivity",
+    "category": "thermal",
+    "name": "black_anodize_absorptivity",
+    "value": 0.88,
+    "unit": "ratio",
+    "description": "Solar absorptivity of black anodized structural panels",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "thermal_prop_white_paint_pcb_z93_emissivity",
+    "category": "thermal",
+    "name": "white_paint_pcb_z93_emissivity",
+    "value": 0.9,
+    "unit": "ratio",
+    "description": "Emissivity of space-grade thermal control white paint",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "thermal_prop_white_paint_pcb_z93_absorptivity",
+    "category": "thermal",
+    "name": "white_paint_pcb_z93_absorptivity",
+    "value": 0.18,
+    "unit": "ratio",
+    "description": "Solar absorptivity of space-grade thermal control white paint",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "thermal_prop_aluminized_mylar_mli_layers_10",
+    "category": "thermal",
+    "name": "aluminized_mylar_mli_layers_10",
+    "value": 0.05,
+    "unit": "ratio",
+    "description": "Effective thermal emissivity (e-star) of 10-layer MLI blanket",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "thermal_prop_silver_teflon_tape_emissivity",
+    "category": "thermal",
+    "name": "silver_teflon_tape_emissivity",
+    "value": 0.85,
+    "unit": "ratio",
+    "description": "Infrared emissivity of silvered Teflon radiator film",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "thermal_prop_silver_teflon_tape_absorptivity",
+    "category": "thermal",
+    "name": "silver_teflon_tape_absorptivity",
+    "value": 0.09,
+    "unit": "ratio",
+    "description": "Solar absorptivity of silvered Teflon radiator film",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "thermal_limit_temp_battery_op_min",
+    "category": "thermal",
+    "name": "temp_battery_op_min",
+    "value": 0.0,
+    "unit": "degC",
+    "description": "Minimum allowable battery operational temperature (charging safe)",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "thermal_limit_temp_battery_op_max",
+    "category": "thermal",
+    "name": "temp_battery_op_max",
+    "value": 35.0,
+    "unit": "degC",
+    "description": "Maximum allowable battery operational temperature to prevent degradation",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "thermal_limit_temp_battery_survival_min",
+    "category": "thermal",
+    "name": "temp_battery_survival_min",
+    "value": -20.0,
+    "unit": "degC",
+    "description": "Survival lower temperature limit for uncharged cells",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "thermal_limit_temp_electronics_industrial_min",
+    "category": "thermal",
+    "name": "temp_electronics_industrial_min",
+    "value": -40.0,
+    "unit": "degC",
+    "description": "Lower limit for industrial-grade CubeSat PCBs",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "thermal_limit_temp_electronics_industrial_max",
+    "category": "thermal",
+    "name": "temp_electronics_industrial_max",
+    "value": 85.0,
+    "unit": "degC",
+    "description": "Upper operational limit for industrial-grade silicon semiconductors",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "thermal_limit_temp_payload_optical_tight_min",
+    "category": "thermal",
+    "name": "temp_payload_optical_tight_min",
+    "value": 15.0,
+    "unit": "degC",
+    "description": "Strict lower thermal limit for high-precision optical lenses",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "thermal_limit_temp_payload_optical_tight_max",
+    "category": "thermal",
+    "name": "temp_payload_optical_tight_max",
+    "value": 25.0,
+    "unit": "degC",
+    "description": "Strict upper thermal limit for high-precision optical lenses to prevent defocus",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "thermal_limit_temp_cryocooler_cold_finger_target",
+    "category": "thermal",
+    "name": "temp_cryocooler_cold_finger_target",
+    "value": -170.0,
+    "unit": "degC",
+    "description": "Target cold tip operating temperature for LWIR / TIR thermal detectors",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "thermal_limit_temp_solar_array_eclipse_min",
+    "category": "thermal",
+    "name": "temp_solar_array_eclipse_min",
+    "value": -100.0,
+    "unit": "degC",
+    "description": "Lowest solar panel temperature observed during deep eclipse",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "thermal_limit_temp_solar_array_sunlit_max",
+    "category": "thermal",
+    "name": "temp_solar_array_sunlit_max",
+    "value": 110.0,
+    "unit": "degC",
+    "description": "Highest solar panel temperature observed at subsolar pointing",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "thermal_hw_heater_patch_power_standard",
+    "category": "thermal",
+    "name": "heater_patch_power_standard",
+    "value": 2.0,
+    "unit": "W",
+    "description": "Typical thermal heating patch power rating for battery pack",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "thermal_hw_heat_pipe_copper_water_qmax",
+    "category": "thermal",
+    "name": "heat_pipe_copper_water_qmax",
+    "value": 40.0,
+    "unit": "W",
+    "description": "Maximum thermal transfer heat transport capacity for miniature axial heat pipes",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "thermal_hw_pyrolytic_graphite_thermal_cond",
+    "category": "thermal",
+    "name": "pyrolytic_graphite_thermal_cond",
+    "value": 1500.0,
+    "unit": "W/m-K",
+    "description": "In-plane thermal conductivity of Pyrolytic Graphite Sheets (PGS)",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "thermal_hw_gap_pad_silicone_thermal_cond",
+    "category": "thermal",
+    "name": "gap_pad_silicone_thermal_cond",
+    "value": 3.0,
+    "unit": "W/m-K",
+    "description": "Thermal interface material conduction value for PCB heat dissipation",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "thermal_hw_micro_cryocooler_stirling_power",
+    "category": "thermal",
+    "name": "micro_cryocooler_stirling_power",
+    "value": 25.0,
+    "unit": "W",
+    "description": "Electrical input power for miniature tactical Stirling cryocooler",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "thermal_hw_thermal_louver_open_ratio",
+    "category": "thermal",
+    "name": "thermal_louver_open_ratio",
+    "value": 0.75,
+    "unit": "ratio",
+    "description": "Variable radiative dissipation ratio of micro-louvers when actuated open",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "prop_isp_cold_gas",
+    "category": "propulsion",
+    "name": "isp_cold_gas",
+    "value": 65.0,
+    "unit": "seconds",
+    "description": "Specific impulse for cold_gas propulsion system",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "prop_thrust_cold_gas",
+    "category": "propulsion",
+    "name": "thrust_cold_gas",
+    "value": 50.0,
+    "unit": "mN",
+    "description": "Nominal thrust force for cold_gas system",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "prop_wetmass_cold_gas",
+    "category": "propulsion",
+    "name": "wet_mass_1u_cold_gas",
+    "value": 1.1,
+    "unit": "kg",
+    "description": "Subsystem wet mass per 1U volume module for cold_gas",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "prop_deltav_cold_gas",
+    "category": "propulsion",
+    "name": "delta_v_capability_6u_cold_gas",
+    "value": 30.0,
+    "unit": "m/s",
+    "description": "Achievable Delta-V on typical 6U (8kg) platform using cold_gas",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "prop_pwr_cold_gas",
+    "category": "propulsion",
+    "name": "operating_power_cold_gas",
+    "value": 5.0,
+    "unit": "W",
+    "description": "Operating electrical power draw for cold_gas",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "prop_isp_chemical_monoprop",
+    "category": "propulsion",
+    "name": "isp_chemical_monoprop",
+    "value": 220.0,
+    "unit": "seconds",
+    "description": "Specific impulse for chemical_monoprop propulsion system",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "prop_thrust_chemical_monoprop",
+    "category": "propulsion",
+    "name": "thrust_chemical_monoprop",
+    "value": 500.0,
+    "unit": "mN",
+    "description": "Nominal thrust force for chemical_monoprop system",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "prop_wetmass_chemical_monoprop",
+    "category": "propulsion",
+    "name": "wet_mass_1u_chemical_monoprop",
+    "value": 1.4,
+    "unit": "kg",
+    "description": "Subsystem wet mass per 1U volume module for chemical_monoprop",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "prop_deltav_chemical_monoprop",
+    "category": "propulsion",
+    "name": "delta_v_capability_6u_chemical_monoprop",
+    "value": 140.0,
+    "unit": "m/s",
+    "description": "Achievable Delta-V on typical 6U (8kg) platform using chemical_monoprop",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "prop_pwr_chemical_monoprop",
+    "category": "propulsion",
+    "name": "operating_power_chemical_monoprop",
+    "value": 12.0,
+    "unit": "W",
+    "description": "Operating electrical power draw for chemical_monoprop",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "prop_isp_electrospray_electric",
+    "category": "propulsion",
+    "name": "isp_electrospray_electric",
+    "value": 800.0,
+    "unit": "seconds",
+    "description": "Specific impulse for electrospray_electric propulsion system",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "prop_thrust_electrospray_electric",
+    "category": "propulsion",
+    "name": "thrust_electrospray_electric",
+    "value": 0.4,
+    "unit": "mN",
+    "description": "Nominal thrust force for electrospray_electric system",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "prop_wetmass_electrospray_electric",
+    "category": "propulsion",
+    "name": "wet_mass_1u_electrospray_electric",
+    "value": 0.9,
+    "unit": "kg",
+    "description": "Subsystem wet mass per 1U volume module for electrospray_electric",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "prop_deltav_electrospray_electric",
+    "category": "propulsion",
+    "name": "delta_v_capability_6u_electrospray_electric",
+    "value": 180.0,
+    "unit": "m/s",
+    "description": "Achievable Delta-V on typical 6U (8kg) platform using electrospray_electric",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "prop_pwr_electrospray_electric",
+    "category": "propulsion",
+    "name": "operating_power_electrospray_electric",
+    "value": 15.0,
+    "unit": "W",
+    "description": "Operating electrical power draw for electrospray_electric",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "prop_isp_gridded_ion_electric",
+    "category": "propulsion",
+    "name": "isp_gridded_ion_electric",
+    "value": 1500.0,
+    "unit": "seconds",
+    "description": "Specific impulse for gridded_ion_electric propulsion system",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "prop_thrust_gridded_ion_electric",
+    "category": "propulsion",
+    "name": "thrust_gridded_ion_electric",
+    "value": 1.2,
+    "unit": "mN",
+    "description": "Nominal thrust force for gridded_ion_electric system",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "prop_wetmass_gridded_ion_electric",
+    "category": "propulsion",
+    "name": "wet_mass_1u_gridded_ion_electric",
+    "value": 2.2,
+    "unit": "kg",
+    "description": "Subsystem wet mass per 1U volume module for gridded_ion_electric",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "prop_deltav_gridded_ion_electric",
+    "category": "propulsion",
+    "name": "delta_v_capability_6u_gridded_ion_electric",
+    "value": 350.0,
+    "unit": "m/s",
+    "description": "Achievable Delta-V on typical 6U (8kg) platform using gridded_ion_electric",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "prop_pwr_gridded_ion_electric",
+    "category": "propulsion",
+    "name": "operating_power_gridded_ion_electric",
+    "value": 55.0,
+    "unit": "W",
+    "description": "Operating electrical power draw for gridded_ion_electric",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "prop_isp_hall_thruster_mini",
+    "category": "propulsion",
+    "name": "isp_hall_thruster_mini",
+    "value": 1200.0,
+    "unit": "seconds",
+    "description": "Specific impulse for hall_thruster_mini propulsion system",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "prop_thrust_hall_thruster_mini",
+    "category": "propulsion",
+    "name": "thrust_hall_thruster_mini",
+    "value": 6.0,
+    "unit": "mN",
+    "description": "Nominal thrust force for hall_thruster_mini system",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "prop_wetmass_hall_thruster_mini",
+    "category": "propulsion",
+    "name": "wet_mass_1u_hall_thruster_mini",
+    "value": 3.0,
+    "unit": "kg",
+    "description": "Subsystem wet mass per 1U volume module for hall_thruster_mini",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "prop_deltav_hall_thruster_mini",
+    "category": "propulsion",
+    "name": "delta_v_capability_6u_hall_thruster_mini",
+    "value": 280.0,
+    "unit": "m/s",
+    "description": "Achievable Delta-V on typical 6U (8kg) platform using hall_thruster_mini",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "prop_pwr_hall_thruster_mini",
+    "category": "propulsion",
+    "name": "operating_power_hall_thruster_mini",
+    "value": 85.0,
+    "unit": "W",
+    "description": "Operating electrical power draw for hall_thruster_mini",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "prop_isp_resistojet_water",
+    "category": "propulsion",
+    "name": "isp_resistojet_water",
+    "value": 180.0,
+    "unit": "seconds",
+    "description": "Specific impulse for resistojet_water propulsion system",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "prop_thrust_resistojet_water",
+    "category": "propulsion",
+    "name": "thrust_resistojet_water",
+    "value": 10.0,
+    "unit": "mN",
+    "description": "Nominal thrust force for resistojet_water system",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "prop_wetmass_resistojet_water",
+    "category": "propulsion",
+    "name": "wet_mass_1u_resistojet_water",
+    "value": 1.2,
+    "unit": "kg",
+    "description": "Subsystem wet mass per 1U volume module for resistojet_water",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "prop_deltav_resistojet_water",
+    "category": "propulsion",
+    "name": "delta_v_capability_6u_resistojet_water",
+    "value": 80.0,
+    "unit": "m/s",
+    "description": "Achievable Delta-V on typical 6U (8kg) platform using resistojet_water",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "prop_pwr_resistojet_water",
+    "category": "propulsion",
+    "name": "operating_power_resistojet_water",
+    "value": 25.0,
+    "unit": "W",
+    "description": "Operating electrical power draw for resistojet_water",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "prop_aerodynamic_drag_sail_area_1m2",
+    "category": "propulsion",
+    "name": "aerodynamic_drag_sail_area_1m2",
+    "value": 1.0,
+    "unit": "m^2",
+    "description": "Cross-sectional deployed area of standard 0.5U drag sail mechanism",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "prop_aerodynamic_drag_sail_deorbit_accel_factor",
+    "category": "propulsion",
+    "name": "aerodynamic_drag_sail_deorbit_accel_factor",
+    "value": 12.0,
+    "unit": "multiplier",
+    "description": "Decay acceleration multiplier provided by 1m2 sail at 500km altitude",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "prop_electrodynamic_tether_length_m",
+    "category": "propulsion",
+    "name": "electrodynamic_tether_length_m",
+    "value": 500.0,
+    "unit": "meters",
+    "description": "Length of conductive tether for Lorentz force orbital deorbiting",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "prop_solid_rocket_motor_deorbit_burn_time",
+    "category": "propulsion",
+    "name": "solid_rocket_motor_deorbit_burn_time",
+    "value": 4.0,
+    "unit": "seconds",
+    "description": "Burn duration of miniature solid apogee/perigee kick motor",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "reg_fcc_5_year_rule_max_lifetime",
+    "category": "regulations",
+    "name": "fcc_5_year_rule_max_lifetime",
+    "value": 5.0,
+    "unit": "years",
+    "description": "FCC orbital debris post-mission disposal lifetime limit (adopted 2022)",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "reg_nasa_25_year_legacy_limit",
+    "category": "regulations",
+    "name": "nasa_25_year_legacy_limit",
+    "value": 25.0,
+    "unit": "years",
+    "description": "Legacy orbital decay guideline for upper LEO satellite disposal",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "reg_itu_harmful_interference_protection_db",
+    "category": "regulations",
+    "name": "itu_harmful_interference_protection_db",
+    "value": 15.0,
+    "unit": "dB",
+    "description": "Protection ratio margin required by ITU radio regulations",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "reg_passivation_battery_depletion_required",
+    "category": "regulations",
+    "name": "passivation_battery_depletion_required",
+    "value": true,
+    "unit": null,
+    "description": "Standard requiring battery isolation switches and venting at mission end",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "reg_pressure_vessel_burst_factor_safety",
+    "category": "regulations",
+    "name": "pressure_vessel_burst_factor_safety",
+    "value": 2.0,
+    "unit": "safety_factor",
+    "description": "Mandatory safety factor for pressurized propellant tanks against maximum design pressure",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "reg_pyrotechnic_inhibit_count_min",
+    "category": "regulations",
+    "name": "pyrotechnic_inhibit_count_min",
+    "value": 3,
+    "unit": "inhibits",
+    "description": "Independent electrical inhibits required for mechanical/pyrotechnic deployments",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "reg_orbital_debris_casualty_risk_nasa_limit",
+    "category": "regulations",
+    "name": "orbital_debris_casualty_risk_nasa_limit",
+    "value": 0.0001,
+    "unit": "risk_fraction",
+    "description": "Maximum allowed probability of human casualty from surviving orbital debris components",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "reg_launch_random_vibration_acceptance_g_rms",
+    "category": "launch",
+    "name": "launch_random_vibration_acceptance_g_rms",
+    "value": 10.5,
+    "unit": "G_rms",
+    "description": "Standard GEVS launch acceptance random vibration qualification level",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "reg_launch_random_vibration_protoflight_g_rms",
+    "category": "launch",
+    "name": "launch_random_vibration_protoflight_g_rms",
+    "value": 14.1,
+    "unit": "G_rms",
+    "description": "Protoflight GEVS qualification random vibration profile",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "reg_launch_quasi_static_axial_g_load",
+    "category": "launch",
+    "name": "launch_quasi_static_axial_g_load",
+    "value": 12.0,
+    "unit": "g",
+    "description": "Maximum axial quasi-static g-load during launch booster ascent",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "reg_launch_quasi_static_lateral_g_load",
+    "category": "launch",
+    "name": "launch_quasi_static_lateral_g_load",
+    "value": 6.0,
+    "unit": "g",
+    "description": "Maximum lateral quasi-static g-load during ascent stage",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "reg_dispenser_maximum_rail_roughness",
+    "category": "launch",
+    "name": "dispenser_maximum_rail_roughness",
+    "value": 0.8,
+    "unit": "microns",
+    "description": "Anodized rail surface finish roughness (Ra) requirement for CubeSat dispensers",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "reg_dispenser_kill_switch_pin_travel",
+    "category": "launch",
+    "name": "dispenser_kill_switch_pin_travel",
+    "value": 3.0,
+    "unit": "mm",
+    "description": "Spring-loaded deployment separation switch travel distance",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "reg_dispenser_timer_post_deploy_rf_silence",
+    "category": "launch",
+    "name": "dispenser_timer_post_deploy_rf_silence",
+    "value": 1800.0,
+    "unit": "seconds",
+    "description": "Mandatory 30-minute silence period before deploying RF antennas after ejection",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "reg_launch_falcon_9_rideshare_capacity_kg",
+    "category": "launch",
+    "name": "launch_falcon_9_rideshare_capacity_kg",
+    "value": 200.0,
+    "unit": "kg",
+    "description": "Typical ESPA ring port payload capacity on SpaceX Transporter rideshare",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "reg_launch_rocket_lab_electron_payload_sso_kg",
+    "category": "launch",
+    "name": "launch_rocket_lab_electron_payload_sso_kg",
+    "value": 200.0,
+    "unit": "kg",
+    "description": "Dedicated launch payload capability to 500km Sun Synchronous Orbit",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "spec_eps_voltage_tolerance",
+    "category": "specifications",
+    "name": "eps_voltage_tolerance",
+    "value": 5.0,
+    "unit": "%",
+    "description": "Engineering specification requirement for eps voltage tolerance",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "spec_eps_operating_temp_low",
+    "category": "specifications",
+    "name": "eps_operating_temp_low",
+    "value": -20.0,
+    "unit": "degC",
+    "description": "Engineering specification requirement for eps operating temp low",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "spec_eps_operating_temp_high",
+    "category": "specifications",
+    "name": "eps_operating_temp_high",
+    "value": 65.0,
+    "unit": "degC",
+    "description": "Engineering specification requirement for eps operating temp high",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "spec_eps_tid_hardness",
+    "category": "specifications",
+    "name": "eps_tid_hardness",
+    "value": 20.0,
+    "unit": "krad",
+    "description": "Engineering specification requirement for eps tid hardness",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "spec_eps_sel_immunity_threshold",
+    "category": "specifications",
+    "name": "eps_sel_immunity_threshold",
+    "value": 45.0,
+    "unit": "MeV-cm2/mg",
+    "description": "Engineering specification requirement for eps sel immunity threshold",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "spec_eps_mass_margin_percentage",
+    "category": "specifications",
+    "name": "eps_mass_margin_percentage",
+    "value": 20.0,
+    "unit": "%",
+    "description": "Engineering specification requirement for eps mass margin percentage",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "spec_eps_power_margin_percentage",
+    "category": "specifications",
+    "name": "eps_power_margin_percentage",
+    "value": 25.0,
+    "unit": "%",
+    "description": "Engineering specification requirement for eps power margin percentage",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "spec_eps_harness_wire_gauge_standard",
+    "category": "specifications",
+    "name": "eps_harness_wire_gauge_standard",
+    "value": 26.0,
+    "unit": "AWG",
+    "description": "Engineering specification requirement for eps harness wire gauge standard",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "spec_obc_voltage_tolerance",
+    "category": "specifications",
+    "name": "obc_voltage_tolerance",
+    "value": 5.0,
+    "unit": "%",
+    "description": "Engineering specification requirement for obc voltage tolerance",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "spec_obc_operating_temp_low",
+    "category": "specifications",
+    "name": "obc_operating_temp_low",
+    "value": -20.0,
+    "unit": "degC",
+    "description": "Engineering specification requirement for obc operating temp low",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "spec_obc_operating_temp_high",
+    "category": "specifications",
+    "name": "obc_operating_temp_high",
+    "value": 65.0,
+    "unit": "degC",
+    "description": "Engineering specification requirement for obc operating temp high",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "spec_obc_tid_hardness",
+    "category": "specifications",
+    "name": "obc_tid_hardness",
+    "value": 20.0,
+    "unit": "krad",
+    "description": "Engineering specification requirement for obc tid hardness",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "spec_obc_sel_immunity_threshold",
+    "category": "specifications",
+    "name": "obc_sel_immunity_threshold",
+    "value": 45.0,
+    "unit": "MeV-cm2/mg",
+    "description": "Engineering specification requirement for obc sel immunity threshold",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "spec_obc_mass_margin_percentage",
+    "category": "specifications",
+    "name": "obc_mass_margin_percentage",
+    "value": 20.0,
+    "unit": "%",
+    "description": "Engineering specification requirement for obc mass margin percentage",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "spec_obc_power_margin_percentage",
+    "category": "specifications",
+    "name": "obc_power_margin_percentage",
+    "value": 25.0,
+    "unit": "%",
+    "description": "Engineering specification requirement for obc power margin percentage",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "spec_obc_harness_wire_gauge_standard",
+    "category": "specifications",
+    "name": "obc_harness_wire_gauge_standard",
+    "value": 26.0,
+    "unit": "AWG",
+    "description": "Engineering specification requirement for obc harness wire gauge standard",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "spec_comm_transceiver_voltage_tolerance",
+    "category": "specifications",
+    "name": "comm_transceiver_voltage_tolerance",
+    "value": 5.0,
+    "unit": "%",
+    "description": "Engineering specification requirement for comm_transceiver voltage tolerance",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "spec_comm_transceiver_operating_temp_low",
+    "category": "specifications",
+    "name": "comm_transceiver_operating_temp_low",
+    "value": -20.0,
+    "unit": "degC",
+    "description": "Engineering specification requirement for comm_transceiver operating temp low",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "spec_comm_transceiver_operating_temp_high",
+    "category": "specifications",
+    "name": "comm_transceiver_operating_temp_high",
+    "value": 65.0,
+    "unit": "degC",
+    "description": "Engineering specification requirement for comm_transceiver operating temp high",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "spec_comm_transceiver_tid_hardness",
+    "category": "specifications",
+    "name": "comm_transceiver_tid_hardness",
+    "value": 20.0,
+    "unit": "krad",
+    "description": "Engineering specification requirement for comm_transceiver tid hardness",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "spec_comm_transceiver_sel_immunity_threshold",
+    "category": "specifications",
+    "name": "comm_transceiver_sel_immunity_threshold",
+    "value": 45.0,
+    "unit": "MeV-cm2/mg",
+    "description": "Engineering specification requirement for comm_transceiver sel immunity threshold",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "spec_comm_transceiver_mass_margin_percentage",
+    "category": "specifications",
+    "name": "comm_transceiver_mass_margin_percentage",
+    "value": 20.0,
+    "unit": "%",
+    "description": "Engineering specification requirement for comm_transceiver mass margin percentage",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "spec_comm_transceiver_power_margin_percentage",
+    "category": "specifications",
+    "name": "comm_transceiver_power_margin_percentage",
+    "value": 25.0,
+    "unit": "%",
+    "description": "Engineering specification requirement for comm_transceiver power margin percentage",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "spec_comm_transceiver_harness_wire_gauge_standard",
+    "category": "specifications",
+    "name": "comm_transceiver_harness_wire_gauge_standard",
+    "value": 26.0,
+    "unit": "AWG",
+    "description": "Engineering specification requirement for comm_transceiver harness wire gauge standard",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "spec_adcs_unit_voltage_tolerance",
+    "category": "specifications",
+    "name": "adcs_unit_voltage_tolerance",
+    "value": 5.0,
+    "unit": "%",
+    "description": "Engineering specification requirement for adcs_unit voltage tolerance",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "spec_adcs_unit_operating_temp_low",
+    "category": "specifications",
+    "name": "adcs_unit_operating_temp_low",
+    "value": -20.0,
+    "unit": "degC",
+    "description": "Engineering specification requirement for adcs_unit operating temp low",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "spec_adcs_unit_operating_temp_high",
+    "category": "specifications",
+    "name": "adcs_unit_operating_temp_high",
+    "value": 65.0,
+    "unit": "degC",
+    "description": "Engineering specification requirement for adcs_unit operating temp high",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "spec_adcs_unit_tid_hardness",
+    "category": "specifications",
+    "name": "adcs_unit_tid_hardness",
+    "value": 20.0,
+    "unit": "krad",
+    "description": "Engineering specification requirement for adcs_unit tid hardness",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "spec_adcs_unit_sel_immunity_threshold",
+    "category": "specifications",
+    "name": "adcs_unit_sel_immunity_threshold",
+    "value": 45.0,
+    "unit": "MeV-cm2/mg",
+    "description": "Engineering specification requirement for adcs_unit sel immunity threshold",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "spec_adcs_unit_mass_margin_percentage",
+    "category": "specifications",
+    "name": "adcs_unit_mass_margin_percentage",
+    "value": 20.0,
+    "unit": "%",
+    "description": "Engineering specification requirement for adcs_unit mass margin percentage",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "spec_adcs_unit_power_margin_percentage",
+    "category": "specifications",
+    "name": "adcs_unit_power_margin_percentage",
+    "value": 25.0,
+    "unit": "%",
+    "description": "Engineering specification requirement for adcs_unit power margin percentage",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "spec_adcs_unit_harness_wire_gauge_standard",
+    "category": "specifications",
+    "name": "adcs_unit_harness_wire_gauge_standard",
+    "value": 26.0,
+    "unit": "AWG",
+    "description": "Engineering specification requirement for adcs_unit harness wire gauge standard",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "spec_gnss_receiver_voltage_tolerance",
+    "category": "specifications",
+    "name": "gnss_receiver_voltage_tolerance",
+    "value": 5.0,
+    "unit": "%",
+    "description": "Engineering specification requirement for gnss_receiver voltage tolerance",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "spec_gnss_receiver_operating_temp_low",
+    "category": "specifications",
+    "name": "gnss_receiver_operating_temp_low",
+    "value": -20.0,
+    "unit": "degC",
+    "description": "Engineering specification requirement for gnss_receiver operating temp low",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "spec_gnss_receiver_operating_temp_high",
+    "category": "specifications",
+    "name": "gnss_receiver_operating_temp_high",
+    "value": 65.0,
+    "unit": "degC",
+    "description": "Engineering specification requirement for gnss_receiver operating temp high",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "spec_gnss_receiver_tid_hardness",
+    "category": "specifications",
+    "name": "gnss_receiver_tid_hardness",
+    "value": 20.0,
+    "unit": "krad",
+    "description": "Engineering specification requirement for gnss_receiver tid hardness",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "spec_gnss_receiver_sel_immunity_threshold",
+    "category": "specifications",
+    "name": "gnss_receiver_sel_immunity_threshold",
+    "value": 45.0,
+    "unit": "MeV-cm2/mg",
+    "description": "Engineering specification requirement for gnss_receiver sel immunity threshold",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "spec_gnss_receiver_mass_margin_percentage",
+    "category": "specifications",
+    "name": "gnss_receiver_mass_margin_percentage",
+    "value": 20.0,
+    "unit": "%",
+    "description": "Engineering specification requirement for gnss_receiver mass margin percentage",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "spec_gnss_receiver_power_margin_percentage",
+    "category": "specifications",
+    "name": "gnss_receiver_power_margin_percentage",
+    "value": 25.0,
+    "unit": "%",
+    "description": "Engineering specification requirement for gnss_receiver power margin percentage",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "spec_gnss_receiver_harness_wire_gauge_standard",
+    "category": "specifications",
+    "name": "gnss_receiver_harness_wire_gauge_standard",
+    "value": 26.0,
+    "unit": "AWG",
+    "description": "Engineering specification requirement for gnss_receiver harness wire gauge standard",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "spec_payload_interface_voltage_tolerance",
+    "category": "specifications",
+    "name": "payload_interface_voltage_tolerance",
+    "value": 5.0,
+    "unit": "%",
+    "description": "Engineering specification requirement for payload_interface voltage tolerance",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "spec_payload_interface_operating_temp_low",
+    "category": "specifications",
+    "name": "payload_interface_operating_temp_low",
+    "value": -20.0,
+    "unit": "degC",
+    "description": "Engineering specification requirement for payload_interface operating temp low",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "spec_payload_interface_operating_temp_high",
+    "category": "specifications",
+    "name": "payload_interface_operating_temp_high",
+    "value": 65.0,
+    "unit": "degC",
+    "description": "Engineering specification requirement for payload_interface operating temp high",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "spec_payload_interface_tid_hardness",
+    "category": "specifications",
+    "name": "payload_interface_tid_hardness",
+    "value": 20.0,
+    "unit": "krad",
+    "description": "Engineering specification requirement for payload_interface tid hardness",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "spec_payload_interface_sel_immunity_threshold",
+    "category": "specifications",
+    "name": "payload_interface_sel_immunity_threshold",
+    "value": 45.0,
+    "unit": "MeV-cm2/mg",
+    "description": "Engineering specification requirement for payload_interface sel immunity threshold",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "spec_payload_interface_mass_margin_percentage",
+    "category": "specifications",
+    "name": "payload_interface_mass_margin_percentage",
+    "value": 20.0,
+    "unit": "%",
+    "description": "Engineering specification requirement for payload_interface mass margin percentage",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "spec_payload_interface_power_margin_percentage",
+    "category": "specifications",
+    "name": "payload_interface_power_margin_percentage",
+    "value": 25.0,
+    "unit": "%",
+    "description": "Engineering specification requirement for payload_interface power margin percentage",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "spec_payload_interface_harness_wire_gauge_standard",
+    "category": "specifications",
+    "name": "payload_interface_harness_wire_gauge_standard",
+    "value": 26.0,
+    "unit": "AWG",
+    "description": "Engineering specification requirement for payload_interface harness wire gauge standard",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "eo_band_snr_panchromatic",
+    "category": "payload",
+    "name": "min_snr_panchromatic",
+    "value": 100.0,
+    "unit": "ratio",
+    "description": "Minimum Signal-to-Noise Ratio requirement for Earth Observation panchromatic band",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "eo_band_gsd_panchromatic",
+    "category": "payload",
+    "name": "max_gsd_panchromatic_500km",
+    "value": 3.5,
+    "unit": "meters",
+    "description": "Nominal ground sampling distance achievable from 500km altitude in panchromatic band",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "eo_band_snr_blue_480nm",
+    "category": "payload",
+    "name": "min_snr_blue_480nm",
+    "value": 100.0,
+    "unit": "ratio",
+    "description": "Minimum Signal-to-Noise Ratio requirement for Earth Observation blue_480nm band",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "eo_band_gsd_blue_480nm",
+    "category": "payload",
+    "name": "max_gsd_blue_480nm_500km",
+    "value": 3.5,
+    "unit": "meters",
+    "description": "Nominal ground sampling distance achievable from 500km altitude in blue_480nm band",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "eo_band_snr_green_560nm",
+    "category": "payload",
+    "name": "min_snr_green_560nm",
+    "value": 100.0,
+    "unit": "ratio",
+    "description": "Minimum Signal-to-Noise Ratio requirement for Earth Observation green_560nm band",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "eo_band_gsd_green_560nm",
+    "category": "payload",
+    "name": "max_gsd_green_560nm_500km",
+    "value": 3.5,
+    "unit": "meters",
+    "description": "Nominal ground sampling distance achievable from 500km altitude in green_560nm band",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "eo_band_snr_red_660nm",
+    "category": "payload",
+    "name": "min_snr_red_660nm",
+    "value": 100.0,
+    "unit": "ratio",
+    "description": "Minimum Signal-to-Noise Ratio requirement for Earth Observation red_660nm band",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "eo_band_gsd_red_660nm",
+    "category": "payload",
+    "name": "max_gsd_red_660nm_500km",
+    "value": 3.5,
+    "unit": "meters",
+    "description": "Nominal ground sampling distance achievable from 500km altitude in red_660nm band",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "eo_band_snr_red_edge_705nm",
+    "category": "payload",
+    "name": "min_snr_red_edge_705nm",
+    "value": 100.0,
+    "unit": "ratio",
+    "description": "Minimum Signal-to-Noise Ratio requirement for Earth Observation red_edge_705nm band",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "eo_band_gsd_red_edge_705nm",
+    "category": "payload",
+    "name": "max_gsd_red_edge_705nm_500km",
+    "value": 3.5,
+    "unit": "meters",
+    "description": "Nominal ground sampling distance achievable from 500km altitude in red_edge_705nm band",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "eo_band_snr_nir_840nm",
+    "category": "payload",
+    "name": "min_snr_nir_840nm",
+    "value": 100.0,
+    "unit": "ratio",
+    "description": "Minimum Signal-to-Noise Ratio requirement for Earth Observation nir_840nm band",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "eo_band_gsd_nir_840nm",
+    "category": "payload",
+    "name": "max_gsd_nir_840nm_500km",
+    "value": 3.5,
+    "unit": "meters",
+    "description": "Nominal ground sampling distance achievable from 500km altitude in nir_840nm band",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "eo_band_snr_swir_1600nm",
+    "category": "payload",
+    "name": "min_snr_swir_1600nm",
+    "value": 100.0,
+    "unit": "ratio",
+    "description": "Minimum Signal-to-Noise Ratio requirement for Earth Observation swir_1600nm band",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "eo_band_gsd_swir_1600nm",
+    "category": "payload",
+    "name": "max_gsd_swir_1600nm_500km",
+    "value": 3.5,
+    "unit": "meters",
+    "description": "Nominal ground sampling distance achievable from 500km altitude in swir_1600nm band",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "gs_station_svalbard_latitude",
+    "category": "ground_segment",
+    "name": "ground_station_svalbard_lat",
+    "value": 78.2,
+    "unit": "deg_N",
+    "description": "High latitude polar tracking station with 14 passes/day",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "gs_station_troll_antarctica_latitude",
+    "category": "ground_segment",
+    "name": "ground_station_troll_antarctica_lat",
+    "value": -72.0,
+    "unit": "deg_S",
+    "description": "Antarctic station providing downlink for polar sun-synchronous orbits",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "gs_station_kiruna_sweden_latitude",
+    "category": "ground_segment",
+    "name": "ground_station_kiruna_sweden_lat",
+    "value": 67.8,
+    "unit": "deg_N",
+    "description": "European high latitude tracking telemetry and command station",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "gs_station_adelaide_australia_latitude",
+    "category": "ground_segment",
+    "name": "ground_station_adelaide_australia_lat",
+    "value": -34.9,
+    "unit": "deg_S",
+    "description": "Southern hemisphere mid-latitude tracking station",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "gs_station_darmstadt_germany_latitude",
+    "category": "ground_segment",
+    "name": "ground_station_darmstadt_germany_lat",
+    "value": 49.8,
+    "unit": "deg_N",
+    "description": "European central operations ground link",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "gs_station_wallops_island_usa_latitude",
+    "category": "ground_segment",
+    "name": "ground_station_wallops_island_usa_lat",
+    "value": 37.9,
+    "unit": "deg_N",
+    "description": "East coast mid-latitude ground tracking station",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "gs_station_madrid_dsn_latitude",
+    "category": "ground_segment",
+    "name": "ground_station_madrid_dsn_lat",
+    "value": 40.4,
+    "unit": "deg_N",
+    "description": "Deep Space Network station for lunar and beyond-LEO CubeSat communication",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "gs_station_goldstone_dsn_latitude",
+    "category": "ground_segment",
+    "name": "ground_station_goldstone_dsn_lat",
+    "value": 35.4,
+    "unit": "deg_N",
+    "description": "Deep Space Network California station for interplanetary missions",
+    "source": "knowledge_base"
+  },
+  {
+    "id": "gs_station_canberra_dsn_latitude",
+    "category": "ground_segment",
+    "name": "ground_station_canberra_dsn_lat",
+    "value": -35.4,
+    "unit": "deg_S",
+    "description": "Deep Space Network Australian station",
+    "source": "knowledge_base"
+  }
+]
